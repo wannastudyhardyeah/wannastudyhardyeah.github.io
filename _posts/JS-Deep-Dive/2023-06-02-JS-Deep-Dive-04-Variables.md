@@ -90,7 +90,7 @@ var score;
 <b><span  style="color: red;">&nbsp;&nbsp;※변수 이름이 등록되는 곳</span></b><br>
 &nbsp;&nbsp;\: 변수 이름을 비롯한 모든 식별자는 실행 컨텍스트<span style="color: #808080;">execution context</span>에 등록됨.<br>
 
-<h3>&nbsp;&nbsp;3.2. ReferenceError(참조 에러)</h3>
+<h3>&nbsp;&nbsp;3.2. <code class="language-plaintext highlighter-rouge" style="font-size: 1.4rem;">ReferenceError</code>(참조 에러)</h3>
 
 식별자를 통해 값을 참조하려 했지만, 자바스크립트 엔진이 등록된 식별자를 찾을 수 없을 때 발생.<br>
 (선언하지 않은 식별자에 접근 시 발생.)<br>

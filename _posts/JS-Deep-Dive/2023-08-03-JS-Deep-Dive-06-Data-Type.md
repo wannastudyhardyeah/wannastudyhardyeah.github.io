@@ -141,7 +141,7 @@ Today is Thursday
 <h2>4. 불리언 타입</h2>
 ``true``{: .js}, ``false``{: .js}<br>
 
-<h2>5. undefined 타입</h2>
+<h2>5. <code class="language-plaintext highlighter-rouge" style="font-size: 1.4rem;">undefined</code> 타입</h2>
 ``undefined``{: .js}가 유일.<br>
 
 ``var`` 키워드로 선언한 변수는 암묵적으로 ``undefined``로 초기화됨.<br>즉, 변수 선언 이후에 값 할당하지 않은 변수 참조 시 ``undefined`` 반환됨.<br>
