@@ -11,9 +11,9 @@ tags: [Javascript]
 이때 연산의 대상을 <b>피연산자</b><span style="color: #808080;">operand</span>라고 함.
 
 <h2>1. 산술<span style="color: #808080;">arithmetic</span> 연산자</h2>
-<h3>1.1. 이항<span style="color: #808080;">binary</span> 산술 연산자</h3>
-<h3>1.2. 단항<span style="color: #808080;">unary</span> 산술 연산자</h3>
-<h3>1.3. 문자열 연결 연산자</h3>
+<h3>&nbsp;&nbsp;1.1. 이항<span style="color: #808080;">binary</span> 산술 연산자</h3>
+<h3>&nbsp;&nbsp;1.2. 단항<span style="color: #808080;">unary</span> 산술 연산자</h3>
+<h3>&nbsp;&nbsp;1.3. 문자열 연결 연산자</h3>
 ```js
 console.log(1 + true);
 console.log(1 + null);
@@ -43,7 +43,7 @@ console.log(a, ,b, c);
 ```
 <br>
 <h2>3. 비교<span style="color: #808080;">comparison</span> 연산자</h2>
-<h3>3.1. 동등<span style="color: #808080;">loose equality</span>/일치<span style="color: #808080;">strict equality</span> 비교 연산자<br></h3>
+<h3>&nbsp;&nbsp;3.1. 동등<span style="color: #808080;">loose equality</span>/일치<span style="color: #808080;">strict equality</span> 비교 연산자<br></h3>
 이 둘은 비교하는 엄격성의 정도가 다름.<br>
 <table bordercolor="black" align="left">
     <tr style="background: #ccffff" align="center">
@@ -102,7 +102,7 @@ false
 ```
 ``NaN``은 자신과 일치하지 않는 유일한 값.<br>
 
-<h3>3.2. 대소 관계 비교 연산자</h3>
+<h3>&nbsp;&nbsp;3.2. 대소 관계 비교 연산자</h3>
 <br>
 <h2>4. 삼항<span style="color: #808080;">termary</span> 조건 연산자</h2>
 조건식의 평가 결과에 따라 반환할 값 결정.
