@@ -117,6 +117,7 @@ console.log("1 and 1.0 is... same?\n => ", 1 === 1.0);
 
 ```js
 var first = 'Thurs';
+
 var last = 'day';
 
 console.log('Today is ' + first + last);
