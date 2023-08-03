@@ -41,7 +41,7 @@ html {
 }
 
 .highlighter-rouge {
-  color: var(--highlighter-rouge-color);
+  color: #3f596f; /* var(--highlighter-rouge-color); */
   margin-top: 0.5rem;
   margin-bottom: 1.2em; /* Override BS Inline-code style */
 }
@@ -92,8 +92,10 @@ code {
   -ms-hyphens: none;
   hyphens: none;
   white-space: pre-wrap;
+  color: #3f596f; // me
 
   &.highlighter-rouge {
+    color: #3f596f; // me
     font-size: $code-font-size;
     padding: 3px 5px;
     word-break: break-word;

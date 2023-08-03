@@ -316,6 +316,7 @@ i {
     min-width: 100%;
     overflow-x: auto;
     border-spacing: 0;
+    border-collapse: collapse;
 
     thead {
       border-bottom: solid 2px rgba(210, 215, 217, 0.75);
@@ -329,16 +330,22 @@ i {
       tr {
         border-bottom: 1px solid var(--tb-border-color);
 
-        &:nth-child(2n) {
-          background-color: var(--tb-even-bg);
+        &:nth-child(1) {
+          background: #ffffffff;
         }
+        
+        // &:nth-child(2n) {
+        //   background-color: var(--tb-even-bg);
+        // }
 
-        &:nth-child(2n + 1) {
-          background-color: var(--tb-odd-bg);
-        }
+        // &:nth-child(2n + 1) {
+        //   background-color: var(--tb-odd-bg);
+        // }
 
         td {
           @extend %table-cell;
+          border: 1px solid;
+
         }
       }
     } /* tbody */
