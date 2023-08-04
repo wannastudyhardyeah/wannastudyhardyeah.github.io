@@ -5,13 +5,14 @@ date: 2023-08-03 23:50:00 +0800
 categories: [SQLD]
 tags: [DATABASE, SQLD]
 math: true
+toc: true
 
 ---
 &nbsp;&nbsp;&nbsp;&nbsp;데이터 모델링이 중요한 이유는<br>
 &nbsp;&nbsp; 파급효과<span style="color: #808080;">leverage</span>, 복잡한 정보 요구사항의 간결한 표현<span style="color: #808080;">conciseness</span>, 데이터 품질<span style="color: #808080;">Data Quality</span>로 정의 가능.<br>
 <br>
 
-<h2>1. 파급효과</h2>
+<h2 >1. 파급효과</h2>
 만약 시스템 구축 완성이 되어가는 테스트 시점에 데이터 모델 변경이 불가피한 상황 발생한다면,<br>
 이 시기의 데이터 구조 변경으로 인한 일련의 변경작업은 전체 시스템 구축 프로젝트에서 큰 위험요소이므로<br>
 시스템 구축 작업 중에서 다른 어떤 설계 과정보다 데이터 설계가 중요.<br>
@@ -52,3 +53,5 @@ DB에 담겨있는 데이터는 기업의 중요 자산이자, 기간 오래될�
 &nbsp;&nbsp;&nbsp;&nbsp;(사소한 업무 변화에서 데이터 모델 수시로 변경됨)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;데이터의 정의를 사용 프로세스와 분리<br>
 &nbsp;&nbsp;&nbsp;&nbsp;=> 데이터 OR 프로세스의 작은 변화가 App, DB에 중대 변화 줄 가능성 줄임.<br>
+
+<br>
