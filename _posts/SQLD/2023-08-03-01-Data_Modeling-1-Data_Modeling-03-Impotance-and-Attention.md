@@ -1,5 +1,5 @@
 ---
-title: 제1장 - 제3절&#58; 데이터 모델의 기본 개념 이해
+title: 제1절 - 3. 데이터 모델의 기본 개념 이해
 author: wannastudyhardyeah
 date: 2023-08-03 23:50:00 +0800
 categories: [SQLD]

@@ -1,5 +1,5 @@
 ---
-title: 제1장 - 제4절&#58; 데이터 모델링의 3단계 진행
+title: 제1절 - 4. 데이터 모델링의 3단계 진행
 author: wannastudyhardyeah
 date: 2023-08-03 23:54:00 +0800
 categories: [SQLD]
@@ -77,4 +77,17 @@ DB 설계 프로세스의 Input으로서,<br>
 
 
 <h2>3. 물리적 데이터 모델<span style="color: #808080;">Physical Data Modeling</span></h2>
+논리 데이터 모델이 데이터 저장소로서 어떻게 컴퓨터 HW에 표현될 것인가를 다룸.<br>
+
+<div style="position: relative; display: inline-block; text-align: right; padding: 5px; height: 100%; border: 1px dotted black;"><b>&nbsp;&nbsp;물리적 스키마</b><br>데이터가 물리적으로 컴퓨터에 어떻게 저장될 것인가에 대한 정의<br></div>
+
+<b>&nbsp;&nbsp;이 단계의 결정사항</b><br>
+테이블, 칼럼 등으로 표현되는 물리적 저장 구조, 사용될 저장 장치, 자료 추출 위해 사용될 접근 방법 등<br>
+계층적 DBMS에선 DB 관리자가 물리적 스키마 설계, 구현하기 위해 더 많은 시간 투자 필요<br>
+
+<br>
+
+<span style="color: red;"><b>&nbsp;*</b></span> 실제 현실 프로젝트에서 'CDM => LDM => PDM'으로 수행하는 경우는 드물다.<br>
+CDM과 LDM을 한꺼번에 수행하여 논리적인 데이터 모델링으로 수행하는 경우가 대부분.<br>
+
 
