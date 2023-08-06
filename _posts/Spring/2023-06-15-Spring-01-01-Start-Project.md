@@ -92,6 +92,6 @@ Executing ':HelloSpringApplication.main()'...
 이렇게 에러 페이지가 뜨는 걸 확인할 수 있다.<br>
 
 <!-- fig_001 -->
-<img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/2023-06-15-Spring-01-01-Start-Project/fig_001_browser.png" width="100%">
+<img src="https://github.com/wannastudyhardyeah/wannastudyhardyeah.github.io/blob/master/images/Spring/2023-06-15-Spring-01-01-Start-Project/fig_001_browser.png?raw=true" width="100%">
 
 <br>
