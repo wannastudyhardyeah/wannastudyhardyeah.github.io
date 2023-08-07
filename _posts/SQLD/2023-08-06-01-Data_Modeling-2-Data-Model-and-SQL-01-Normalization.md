@@ -18,6 +18,9 @@ math: true
 <h3>1.1. 다중 값<span style="color: #808080;">multivalued</span></h3>
 &nbsp;&nbsp;연락처 속성에 다중값 들어가는 경우<br>
 
+<figure align="center"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/2023-08-06-01-Data_Modeling-2-Data-Model-and-SQL-01-Normalization/Fig_1_2_1_1_01_IE.png" width="100%"><figcaption style="text-align: center;">IE 표기법</figcaption></figure><br>
+<figure align="center"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/2023-08-06-01-Data_Modeling-2-Data-Model-and-SQL-01-Normalization/Fig_1_2_1_1_02_barker.png" width="100%"><figcaption style="text-align: center;">바커 표기법</figcaption></figure><br>
+
 <table style="text-align: center;" align="left">
     <tr style="font-weight:bold; background: #e0e0e0;">
         <td>고객번호</td>
@@ -46,8 +49,8 @@ math: true
 &nbsp;\- 집전화가 여러 대이거나, 핸드폰이 여러 대라면 원하는 속성 값 추출 어려움<br>
 &nbsp;\- 명확치 않은 속성은 이메일같은 다른 유형 데이터 포함 가능성 존재<br>
 
-&nbsp;&nbsp;=> 개발 복잡성 증가, 연락처 속성의 의미 퇴색
-&nbsp;&nbsp;==> 장기적으로 불안정 데이터 구조 양산
+&nbsp;&nbsp;=> 개발 복잡성 증가, 연락처 속성의 의미 퇴색<br>
+&nbsp;&nbsp;==> 장기적으로 불안정 데이터 구조 양산<br>
 
 <table style="text-align: center;" align="left">
     <tr style="font-weight:bold; background: #e0e0e0;">
@@ -165,12 +168,128 @@ math: true
     <caption style="text-align: center;">[주문상세]</caption>
 </table>
 
+상품번호는 주문 시 발생하는 매핑 정보로서 의미 가짐 => 중복된 데이터 X<br>
+But, 상품명은 오직 상품번호에 의해서만 결정<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>("종속적")</b><br>
+
+<b>함수종속성</b><span style="color: #808080;">Functional Dependency</span><br>
+&nbsp;\: 데이터들이 어떤 기준값에 의해 종속되는 현상<br>
+
+<table border="1px solid !important" style="text-align: center;" align="left">
+    <tr style="font-weight:bold; background: #e0e0e0;">
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box">함수종속성</td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+    </tr>
+    <tr>
+        <td class="none_tr_box" style="border-left: 1px solid;"></td>
+        <td style="border: 1px solid">결정자<br>(Determinant)</td>
+        <td class="none_tr_box"><b>----></b></td>
+        <td style="border: 1px solid">종속자<br>(Dependent)</td>
+        <td class="none_tr_box" style="border-right: 1px solid;"></td>
+    </tr>
+    <tr>
+        <td class="none_tr_box" style="border-left: 1px solid;"></td>
+        <td style="border: 1px solid">상품번호</td>
+        <td class="none_tr_box"><b>----></b></td>
+        <td style="border: 1px solid">상품명</td>
+        <td class="none_tr_box" style="border-right: 1px solid;"></td>
+    </tr>
+    <tr>
+        <td class="none_tr_box" style="border-left: 1px solid; border-bottom: 1px solid;"></td>
+        <td class="none_tr_box" style="border-bottom: 1px solid;"></td>
+        <td class="none_tr_box" style="border-bottom: 1px solid;"></td>
+        <td class="none_tr_box" style="border-bottom: 1px solid;"></td>
+        <td class="none_tr_box" style="border-right: 1px solid; border-bottom: 1px solid;"></td>
+    </tr>
+    <caption style="text-align: center;">[함수의 종속성]</caption>
+</table>
+
+상품명\: 상품번호에 종속되어 있음<br>
+&nbsp;&nbsp;==> 종속자<br>
+상품번호\: 상품명을 결정함<br>
+&nbsp;&nbsp;==> 결정자<br>
+
+
+주문상세 엔터티의 상품명은 식별자 전체가 아닌 일부에만 종속적<br>
+&nbsp;==> 부분 종속<span style="color: #808080;">Partial Dependency</span><br>
+&nbsp;==> 제2정규형에 위배
+
+<b>문제점</b><br>
+&nbsp;\- 상품명 변경이 업무적 반영 필요하다면,<br>
+&nbsp;&nbsp;주문상세의 중복된 상품명을 모두 변경해야 함.<br>
+많이 팔린 상품일수록 변경해야 할 상품명 부하도 크게 증가!<br>
+&nbsp;\- 주문상세의 상품명 변경하더라도 특정 시점엔 미변경 상품명 존재<br>
+&nbsp;&nbsp;이때 들어온 트랜잭션은 비일관 데이터 조회하게 됨!<br>
+
+
+
+상품 엔터티 추가
+&nbsp;\: 상품명 속성을 상품 엔터티에서 관리, 상품번호를 매핑키로 활용<br>
+&nbsp;&nbsp;==> 주문상세 엔터티의 부분 종속성 제거 가능.<br>
+
+
+<b>조인<span style="color: #808080;">Join</span></b><br>
+기존 주문상세 엔터티에서 상품 엔터티 분리하여 상품정보 관리하도록 함.<br>
+&nbsp;==> 주문상세 엔터티에선 상품번호만 존재,<br>
+&nbsp;&nbsp;&nbsp;상품번호 매핑키로 상품 엔터티에서 원하는 상품 데이터 조회 가능.<br>
 
 <br>
 <h2>3. 제3정규형</h2>
 엔터티의 일반속성 간에는 서로 종속적이지 않는다.<br>
 
+고객번호는 주문번호에 종속적,<br>
+고객명은 고객번호에 종속적.<br>
+&nbsp;&nbsp;==> 고객명이 주문번호에 종속적<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<b>이행적 종속</b><span style="color: #808080;">Transitive Dependency</span>)<br>
+
+이러한 이행적 종속을 배제하는 게 제3정규형.<br>
+
+<table class="none_tr_box" style="text-align: center;" align="left">
+    <tr class="none_tr_box">
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+    </tr>
+    <tr class="none_tr_box">
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box">주문번호 -> 고객번호</td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+    </tr>
+    <tr class="none_tr_box">
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box">---></td>
+        <td class="none_tr_box">주문번호 -> 고객명</td>
+        <td class="none_tr_box"></td>
+    </tr>
+    <tr class="none_tr_box">
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box">고객번호 -> 고객명</td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+    </tr>
+    <tr class="none_tr_box">
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+        <td class="none_tr_box"></td>
+    </tr>
+</table>
+
+즉, 고객명이 식별자가 아닌 일반속성에 종속적<br>
+&nbsp;==> 제3정규형 위배<br>
+
 <br>
 <h2>4. 반정규화와 성능</h2>
+반정규화?<br>
+\: 성능 위해 데이터 중복 허용<br>
 
 <br>
