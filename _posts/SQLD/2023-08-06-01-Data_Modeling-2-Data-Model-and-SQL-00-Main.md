@@ -1,7 +1,7 @@
 ---
-title: 제1장 - 데이터 모델링의 이해
+title: 제2장 - 데이터 모델과 SQL
 author: wannastudyhardyeah
-date: 2023-08-03 00:00:20 +0800
+date: 2023-08-06 00:00:10 +0800
 categories: [SQLD]
 tags: [DATABASE, SQLD]
 math: true
