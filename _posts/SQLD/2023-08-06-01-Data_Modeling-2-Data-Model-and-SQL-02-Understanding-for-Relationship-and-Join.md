@@ -18,6 +18,8 @@ math: true
 &nbsp;==> 식별자 상속하고, 상속된 속성을 매핑키로 활용하여 데이터 결합해볼수 있음.<br>
 &nbsp;==> 조인<span style="color: #808080;">Join</span><br>
 
+figure align="center"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/2023-08-06-01-Data_Modeling-2-Data-Model-and-SQL-02-Understanding-for-Relationship-and-Join/Fig_1_2_2_1_01_Join_IE-and-Barker.png" width="100%"><figcaption style="text-align: center;">바커 표기법</figcaption></figure><br>
+
 
 <br>
 <h2>2. 계층형 데이터 모델</h2>
