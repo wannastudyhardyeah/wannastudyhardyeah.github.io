@@ -12,10 +12,10 @@ math: true
 (성능을 위해 반정규화 하기도 함)
 
 <br>
-<h2>1. 제1정규형</h2>
+<h2 id="1-first-normal">1. 제1정규형</h2>
 모든 속성은 반드시 하나의 값을 가져야 한다.<br>
 
-<h3>1.1. 다중 값<span style="color: #808080;">multivalued</span></h3>
+<h3 id="1-1-multivalued">1.1. 다중 값<span style="color: #808080;">multivalued</span></h3>
 &nbsp;&nbsp;연락처 속성에 다중값 들어가는 경우<br>
 
 <figure align="center"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/2023-08-06-01-Data_Modeling-2-Data-Model-and-SQL-01-Normalization/Fig_1_2_1_1_01_IE.png" width="100%"><figcaption style="text-align: center;">IE 표기법</figcaption></figure><br>
@@ -111,7 +111,7 @@ math: true
 집전화 OR 핸드폰 번호 구분하고 싶다면<br>
 &nbsp;&nbsp;=> 고객연락처 엔터티에 '연락처구분코드' 속성 추가<br>
 
-<h3>1.2. 다른 유형의 중복 데이터</h3>
+<h3 id="1-2-other-type-of-duplicated">1.2. 다른 유형의 중복 데이터</h3>
 
 <b>우려되는 점</b><br>
 &nbsp;\- 상품을 3개 이상 주문 불가<br>
@@ -129,7 +129,7 @@ math: true
 
 
 <br>
-<h2>2. 제2정규형</h2>
+<h2 id="2-second-normal">2. 제2정규형</h2>
 엔터티의 일반속성은 주식별자 전체에 종속적이어야 한다.<br>
 
 '상품명' 속성이 주식별자가 아니라 오직 상품번호에 대해서만 반복, 쌓이는 구조<br>
@@ -237,7 +237,7 @@ But, 상품명은 오직 상품번호에 의해서만 결정<br>
 &nbsp;&nbsp;&nbsp;상품번호 매핑키로 상품 엔터티에서 원하는 상품 데이터 조회 가능.<br>
 
 <br>
-<h2>3. 제3정규형</h2>
+<h2 id="third-normal">3. 제3정규형</h2>
 엔터티의 일반속성 간에는 서로 종속적이지 않는다.<br>
 
 고객번호는 주문번호에 종속적,<br>
@@ -288,7 +288,7 @@ But, 상품명은 오직 상품번호에 의해서만 결정<br>
 &nbsp;==> 제3정규형 위배<br>
 
 <br>
-<h2>4. 반정규화와 성능</h2>
+<h2 id="de-normal">4. 반정규화와 성능</h2>
 반정규화?<br>
 \: 성능 위해 데이터 중복 허용<br>
 
