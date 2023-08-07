@@ -14,7 +14,7 @@ math: true
 &nbsp;&nbsp;&nbsp;&nbsp;입금자 계좌에선 이체금액 가산<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>데이터 정합성 위해 위 작업은 전부 실행 OR 전부 취소</b><br>
 
-
+<br>
 <b>데이터 모델에서의 트랜잭션</b><br>
 
 
