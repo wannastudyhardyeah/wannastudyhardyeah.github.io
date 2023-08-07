@@ -20,6 +20,14 @@ math: true
 
 figure align="center"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/2023-08-06-01-Data_Modeling-2-Data-Model-and-SQL-02-Understanding-for-Relationship-and-Join/Fig_1_2_2_1_01_Join_IE-and-Barker.png" width="100%"><figcaption style="text-align: center;">바커 표기법</figcaption></figure><br>
 
+<b>해석</b><br>
+\- 고객 엔터티 입장<br>
+&nbsp;&nbsp;\: 한 명의 고객은 여러 번 주문 가능<br>
+\- 주문 엔터티 입장<br>
+&nbsp;&nbsp;\: 각각의 주문은 반드시 한 명의 고객에 의해 발생<br>
+
+<b>==></b>&nbsp;관계를 맺음으로써<br>
+&nbsp;&nbsp;&nbsp;&nbsp;고객 엔터티의 식별자인 고객번호를 주문 엔터티에 상속시킴<br>
 
 <br>
 <h2>2. 계층형 데이터 모델</h2>
