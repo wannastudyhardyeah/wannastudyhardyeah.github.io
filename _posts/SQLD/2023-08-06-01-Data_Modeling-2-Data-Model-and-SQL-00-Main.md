@@ -12,18 +12,18 @@ math: true
 
 <br>
 <hr width="50%">
-<h2>제2절 관계와 조인의 이해<span style="color: #808080;">entity</span></h2>
+<h2>제2절 관계와 조인<span style="color: #808080;">Join</span>의 이해</h2>
 
 &nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/01-Data_Modeling-2-Data-Model-and-SQL-02-Understanding-for-Relationship-and-Join" target="blank">2. 관계와 조인의 이해</a><br>
 <br>
 <hr width="50%">
-<h2>제3절 모델이 표현하는 트랜잭션의 이해<span style="color: #808080;">attribute</span></h2>
-&nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/01-Data_Modeling-2-Data-Model-and-SQL-03-Understanding-for-Transaction-that-Model-illustrates/" target="blank">속성</a><br>
+<h2>제3절 모델이 표현하는 트랜잭션<span style="color: #808080;">Transaction</span>의 이해</h2>
+&nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/01-Data_Modeling-2-Data-Model-and-SQL-03-Understanding-for-Transaction-that-Model-illustrates/" target="blank">모델이 표현하는 트랜잭션의 이해</a><br>
 <br>
 <hr width="50%">
-<h2>제4절 Null 속성의 이해<span style="color: #808080;">relation</span></h2>
-&nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/01-Data_Modeling-2-Data-Model-and-SQL-04-Understanding-for-Null-Attribute/" target="blank">관계</a><br>
+<h2>제4절 <code class="language-plaintext highlighter-rouge" style="font-size: 1.4rem;">Null</code> 속성의 이해</h2>
+&nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/01-Data_Modeling-2-Data-Model-and-SQL-04-Understanding-for-Null-Attribute/" target="blank">Null 속성의 이해</a><br>
 <br>
 <hr width="50%">
-<h2>제5절 본질식별자 vs. 인조식별자<span style="color: #808080;">identifier</span></h2>
-&nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/01-Data_Modeling-2-Data-Model-and-SQL-05-Intrinsic-Indertifier-Versus-Artificial-Identifier/" target="blank">식별자</a><br>
+<h2>제5절 본질식별자 vs. 인조식별자</h2>
+&nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/01-Data_Modeling-2-Data-Model-and-SQL-05-Intrinsic-Indertifier-Versus-Artificial-Identifier/" target="blank">본질식별자 Vs 인조식별자</a><br>
