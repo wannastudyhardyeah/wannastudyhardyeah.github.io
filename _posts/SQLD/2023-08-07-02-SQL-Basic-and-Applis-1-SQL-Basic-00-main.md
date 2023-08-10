@@ -25,4 +25,4 @@ mermaid: true
 <br>
 <hr width="50%">
 <h2>제5절 <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">WHERE</code> 문</h2>
-&nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/02-SQL-Basic-and-Applis-1-SQL-Basic-05-WHERE-Clause/ target="blank">5. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">WHERE</code> 문</a><br>
+&nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/02-SQL-Basic-and-Applis-1-SQL-Basic-05-WHERE-Clause/" target="blank">5. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">WHERE</code> 문</a><br>
