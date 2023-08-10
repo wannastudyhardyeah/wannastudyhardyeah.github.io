@@ -114,6 +114,9 @@ pwa:
 
 paginate: 10
 
+# plugins
+plugins:
+  - kramdown-plantuml
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
@@ -124,8 +127,15 @@ kramdown:
     span:
       line_numbers: false
     block:
-      line_numbers: true
+      line_numbers: false
       start_line: 1
+  plantuml:
+    theme:
+      name: 
+    # width: 450px
+    # height: none
+    # scale: 1
+    style: "border: 0px solid black"
 
 collections:
   tabs:

@@ -273,17 +273,19 @@ h1 + .post-meta {
     padding-left: 0;
 
     li {
+      // 0.4rem = 6.4px
       &:not(:last-child) {
         margin: 0.4rem 0;
       }
 
+      // ul > li > a
       a {
         padding: 0.2rem 0 0.2rem 1.25rem;
       }
     }
 
     /* Overwrite TOC plugin style */
-
+    // #toc-wrapper > ul > .toc-link
     .toc-link {
       display: block;
       white-space: nowrap;
@@ -313,11 +315,22 @@ h1 + .post-meta {
       }
     }
 
+    // #toc-wrapper > ul > ul > a
     ul {
       a {
         padding-left: 2rem;
       }
+      // TODO: to make for "h4"-case
+      // #toc-wrapper > ul > ul > ul > a
+      ul {
+        a {
+          padding-left: 2.725rem;
+        }
+      }
     }
+
+    
+
   }
 }
 

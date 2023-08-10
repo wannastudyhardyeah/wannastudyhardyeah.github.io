@@ -1,5 +1,5 @@
 ---
-title: 제1장 - 데이터 모델링의 이해
+title: 과목 1 데이터 모델링의 이해 // 제1장 데이터 모델링의 이해
 author: wannastudyhardyeah
 date: 2023-08-03 00:00:20 +0800
 categories: [SQLD]

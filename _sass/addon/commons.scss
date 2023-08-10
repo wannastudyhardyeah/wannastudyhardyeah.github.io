@@ -680,6 +680,8 @@ figure .mfp-title {
 /* mermaid */
 .mermaid {
   text-align: center;
+  display: flex !important;
+  align-self: left;
 }
 
 /* MathJax */

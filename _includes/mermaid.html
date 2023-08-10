@@ -10,7 +10,9 @@
         }
 
         let expectedTheme = mode === ModeToggle.DARK_MODE ? 'dark' : 'default';
-        let config = { theme: expectedTheme };
+        let config = { 
+          theme: expectedTheme
+        };
 
         /* Re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */
         $('.mermaid').each(function () {
@@ -35,7 +37,11 @@
     }
 
     let mermaidConf = {
-      theme: initTheme /* <default|dark|forest|neutral> */
+      theme: initTheme, /* <default|dark|forest|neutral> */
+      er: {
+          diagramPadding: 20,
+          entityPadding: 30
+      },
     };
 
     /* Create mermaid tag */
