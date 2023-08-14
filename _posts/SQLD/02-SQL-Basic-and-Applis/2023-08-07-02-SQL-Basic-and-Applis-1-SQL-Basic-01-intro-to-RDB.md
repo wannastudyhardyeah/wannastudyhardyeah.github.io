@@ -104,9 +104,8 @@ flowchart LR
 
 ```plantuml
 @startuml
-left to right direction
 hide circle
-scale 675*420
+scale 475*600
 
 entity TEAM {
     **REGION_NAME**
@@ -151,13 +150,14 @@ entity SCHEDULE {
 }
 
 
-TEAM ||...o{ PLAYER
-TEAM }o...|| STADIUM
-STADIUM ||---o{ SCHEDULE
+SCHEDULE }o-d-||STADIUM
+PLAYER }o..|| TEAM
+TEAM }o.down|| STADIUM
 
 @enduml
 ```
 
+<br>
 위 테이블 간의 양방향 관계는 다음과 같다.<br>
 
 &nbsp;\- 하나의 팀은 여러 명의 선수 포함할 수 있다.<br>

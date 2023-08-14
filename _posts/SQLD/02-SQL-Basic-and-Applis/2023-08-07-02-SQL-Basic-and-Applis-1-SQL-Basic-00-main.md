@@ -26,3 +26,13 @@ mermaid: true
 <hr width="50%">
 <h2>제5절 <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">WHERE</code> 문</h2>
 &nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/02-SQL-Basic-and-Applis-1-SQL-Basic-05-WHERE-Clause/" target="blank">5. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">WHERE</code> 문</a><br>
+<hr width="50%">
+<br>
+<hr width="50%">
+<h2>제6절 <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">WHERE</code> 문</h2>
+&nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/02-SQL-Basic-and-Applis-1-SQL-Basic-06-Function/" target="blank">5. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">WHERE</code> 문</a><br>
+<hr width="50%">
+<br>
+<hr width="50%">
+<h2>제7절 <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">WHERE</code> 문</h2>
+&nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/02-SQL-Basic-and-Applis-1-SQL-Basic-07-GROUP-BY-HAVING/" target="blank">5. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">WHERE</code> 문</a><br>
