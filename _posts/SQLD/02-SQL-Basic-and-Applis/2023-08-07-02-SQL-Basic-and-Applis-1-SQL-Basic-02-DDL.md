@@ -315,7 +315,9 @@ MODIFY  ORIG_YYYY VARCHAR(8) DEFAULT '20020129' NOT NULL;
 ```
 
 ```sql
-DESC TEAM_TEMP;
+SELECT *
+    FROM COLS
+    WHERE TABLE_NAME = 'TEAM_TEMP';
 ```
 <br>
 <b>결과</b><br>
@@ -329,6 +331,17 @@ DESC TEAM_TEMP;
 | ORIG\_YYYY | varchar\(8\) | NO |  | 20020129 |  |
 | STADIUM\_ID | char\(3\) | NO |  | null |  |
 
+<b>칼럼 변경 시 아래 사항 고려</b><br>
+- 해당 칼럼의 크기를 늘릴 수는 있지만 줄이지는 못함.<br>
+기존 데이터가 훼손될 수 있기 때문.<br>
+- 해당 칼럼이 `NULL` 값만을 가지고 있거나<br>
+테이블에 아무 행도 없으면 칼럼의 폭을 줄일 수 있음.<br>
+- 해당 칼럼이 `NULL` 값만 가지고 있으면<br>
+데이터 유형 변경 가능.<br>
+- 해당 칼럼의 `DEFAULT` 값 바꾸면<br>
+변경 작업 이후 발생하는 행 삽입에만 영향 미침.<br>
+- 해당 칼럼에 `NULL` 값 없을 경우에만<br>
+`NOT NULL` 제약조건 추가 가능.<br>
 
 <h3 id="rename-column-h3" data-heading-label="3.4. RENAME COLUMN">&nbsp;&nbsp;3.4. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.36rem;"><b>RENAME COLUMN</b></code></h3>
 
@@ -344,11 +357,21 @@ ALTER   TABLE       테이블명
 DROP    CONSTRAINT  제약조건명;
 ```
 
-<h3 id="add-constraint-h3" data-heading-label="3.6. ADD CONSTRAINT">&nbsp;&nbsp;3.6. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.36rem;"><b>ADD CONSTRAINT</b></code></h3>
+```sql
+DROP TABLE PLAYER;
+```
+
+<h3 id="add-constraint-h3" data-heading-label="3.6. ADD CONSTRAINT">&nbsp;&nbsp;3.6. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.36rem;"><b>TRUNCATE TABLE</b></code></h3>
+&nbsp;&nbsp;테이블 자체는 삭제 X<br>
+해당 테이블에 들어있던 모든 행들 제거되고<br>
+저장 공간 재사용 가능하도록 해체함.<br>
 
 ```sql
-ALTER   TABLE       테이블명
-ADD     CONSTRAINT  제약조건명  제약조건 (칼럼명);
+TRUNCATE TABLE;
+```
+
+```sql
+TRUNCATE TABLE TEAM;
 ```
 
 <hr width="50%">

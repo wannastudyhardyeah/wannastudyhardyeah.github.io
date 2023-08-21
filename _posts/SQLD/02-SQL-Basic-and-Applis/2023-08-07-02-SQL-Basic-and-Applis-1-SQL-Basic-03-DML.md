@@ -24,6 +24,22 @@ VALUES  (COLUMN_LIST에 넣을 VALUE_LIST);
 
 <span style="color: red;"><b>※</b></span> <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">Primary Key</code> OR <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">Not NULL</code>로 지정된 칼럼은 <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.0rem;">NULL</code> 허용 X.<br>
 
+```sql
+INSERT INTO PLAYER
+    (PLAYER_ID, PLAYER_NAME, TEAM_ID, E_PLAYER_NAME, NICKNAME, JOIN_YYYY, POSITION, BACK_NO, NATION, BIRTH_DATE, SOLAR, HEIGHT, WEIGHT)
+    VALUES ('2002007', '박지성', 'K07', 'MF', 178, 73, 7);
+```
+
+```sql
+SELECT *
+    FROM PLAYER;
+```
+
+```plaintext
+2002007,박지성,K07,MF,178,73  ,7,null,null,null,null,null,null
+```
+
+
 <br>
 ②
 ```sql
@@ -35,11 +51,25 @@ VALUES  (전체 COLUMN에 넣을 VALUE_LIST);
 <hr width="50%">
 <br>
 <h2 id="update" data-heading-label="2. UPDATE">2. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.4rem;"><b>UPDATE</b></code></h2>
+&nbsp;&nbsp;입력한 정보 중에 
+잘못 입력되거나 변경으로 인해 수정해야 할 때 사용.<br>
 
 ```sql
 UPDATE  테이블명
 SET     수정되어야 할 칼럼명 = 수정되기를 원하는 새로운 값;
 ```
+
+```sql
+UPDATE PLAYER
+    SET BACK_NO = 99;
+
+UPDATE PLAYER
+    SET POSITION = 'MF';
+```
+```plaintext
+2002007,박지성,K07,MF,178,73  ,7,99,null,null,null,null,null
+```
+
 <hr width="50%">
 <br>
 <h2 id="delete" data-heading-label="3. DELETE">3. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.4rem;"><b>DELETE</b></code></h2>
@@ -75,8 +105,15 @@ FROM    PLAYER;
 SELECT  *
 FROM    테이블명;
 ```
+```sql
+SELECT *
+  FROM  PLAYER
+```
+
 해당 테이블의 모든 칼럼 정보 보기 위해<br>
 와일드카드로 애스터리스크``*`` 사용하여 조회 가능.<br>
+
+
 
 <h3 id="define-alias-h3" data-heading-label="4.3. ALIAS 부여하기">&nbsp;&nbsp;4.3. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.36rem;"><b>ALIAS</b></code> 부여하기</h3>
 
