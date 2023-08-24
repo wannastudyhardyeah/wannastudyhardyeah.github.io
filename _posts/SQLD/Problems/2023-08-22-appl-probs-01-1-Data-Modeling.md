@@ -9,7 +9,7 @@ mermaid: true
 
 ---
 
-<a href="http://127.0.0.1:4000/posts/appl-probs-01-2-Data-Model-and/"><b style="font-size:1.3rem;">"2장 - 데이터 모델과 성능" 바로가기</b></a><br>
+<a href="http://wannastudyhardyeah.github.io/posts/appl-probs-01-2-Data-Model-and/"><b style="font-size:1.3rem;">"2장 - 데이터 모델과 성능" 바로가기</b></a><br>
 
 <hr width="100%">
 <h2 id="attention"><b>4번 - 데이터 모델링 유의점</b></h2>
