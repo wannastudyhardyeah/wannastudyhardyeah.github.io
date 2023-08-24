@@ -34,7 +34,9 @@ mermaid: true
 <h2 id="denormal-table-case-3"><b>37번 - 반정규화 테이블의 성능저하 사례1</b></h2>
 
 <!-- fig_001 -->
-<img src="D:/github_workspace/wannastudyhardyeah/wannastudyhardyeah.github.io/images/SQLD/Problems/2023-08-22-appl-probs-01-2-Data-Model-and/screenshot20230823213522.jpg" width="100%">
+<figure>
+    <img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-22-appl-probs-01-2-Data-Model-and/fig-001.jpg" width="100%">
+</figure>
 
 함수종속성이<br>
 <i>{관서번호, 납부자번호} -> {직급명, 통신번호}<br>
@@ -51,6 +53,9 @@ mermaid: true
 <h2 id="decide-type-normal"><b>39번 - 정규형과 정규화 종류 판단</b></h2>
 
 <!-- fig-002 -->
+<figure>
+    <img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-22-appl-probs-01-2-Data-Model-and/fig-002.jpg" width="100%">
+</figure>
 
 제시된 수강지도 엔터티와 함수종속성에 따르면,<br>
 중복되어 있는 속성은 없기 때문에 1차 정규형에 해당된다고 볼 수 있고<br>
