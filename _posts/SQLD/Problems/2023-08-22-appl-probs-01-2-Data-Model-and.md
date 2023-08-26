@@ -1,5 +1,5 @@
 ---
-title: 실전문제) 2장 - 데이터 모델과 성능
+title: 실전문제) 1과목 2장 - 데이터 모델과 성능
 author: wannastudyhardyeah
 date: 2023-08-22 13:11:30 +0800
 categories: [SQLD]

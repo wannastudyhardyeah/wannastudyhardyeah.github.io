@@ -1,5 +1,5 @@
 ---
-title: HR) Type of Triangle
+title: PS) Type of Triangle
 author: wannastudyhardyeah
 date: 2023-08-24 11:12:30 +0800
 categories: [SQL]
@@ -11,7 +11,7 @@ mermaid: true
 <span style="font-size: 1.3rem;"><b>출처</b></span><br>
 \: <a href="https://www.hackerrank.com/challenges/what-type-of-triangle/problem">HackerRank</a>
 <br><br>
-<b style="font-size: 1.3rem;">문제</b><br>
+<h2 id="problem">문제</h2>
 Write a query identifying the type of each record in the <b>TRIANGLES</b> table using its three side lengths. Output one of the following statements for each record in the table:
 
 - <b>Equilateral</b>: It's a triangle with  sides of equal length.
@@ -19,7 +19,7 @@ Write a query identifying the type of each record in the <b>TRIANGLES</b> table 
 - <b>Scalene</b>: It's a triangle with  sides of differing lengths.
 - <b>Not A Triangle</b>: The given values of A, B, and C don't form a triangle.
 <hr>
-<b>나의 풀이</b>
+<h2 id="my-solved">나의 풀이</h2>
 ```sql
 SELECT
     CASE WHEN 
@@ -68,10 +68,18 @@ SELECT CASE
 
 그치만...
 
-<h2>삽질로 깨달은 것</h2>
+<h2 id="insight">삽질로 깨달은 것</h2>
 
 - ``CASE WHEN``의 다중 nest는 어케 하는지에 대해.
 
 - SQL의 Not Equal의 기본 표현은 ``<>``.
 
 - ``CASE WHEN``의 ``THEN`` 직후에는 마치 출력함수로 출력하듯 ``''``로 감싼 임의의 문자열을 작성할 수도 있다.
+
+- (특정 테이블의 칼럼이 아닌) 여러 개의 값들 중에서 2번째로 큰 수를 찾기 위해서는
+아래와 같은 방식의 코드를 이용해야 한다.<br>
+(물론 아직 내가 못 찾은 것일 수도 있다. 제발 그랬으면...)
+```sql
+(GREATEST(T.A, T.B, T.C) >= (LEAST(GREATEST(T.A, T.B), GREATEST(T.A, T.C), GREATEST(T.B, T.C))
+```
+마찬가지로, 3번째나 n번째로 큰 수는 저걸 해당 수만큼 반복하면 된다.
