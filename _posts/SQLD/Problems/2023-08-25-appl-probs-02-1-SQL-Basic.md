@@ -187,6 +187,9 @@ FROM STUD;
 ```
 
 <!-- fig_001 -->
+<figure>
+    <img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-1-SQL-Basic/fig_001.JPG" width="100%">
+</figure>
 실행 결과는 세 번 모두 위와 같이 동일하였다.<br>
 
 
@@ -196,6 +199,9 @@ FROM STUD;
 
 제시된 두 테이블을 다이어그램으로 나타내면 다음과 같다.<br>
 <!-- fig_002 -->
+<figure>
+    <img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-1-SQL-Basic/fig_002.jpg" width="80%">
+</figure>
 
 그리고 제시된 A, B, C 각각을 실행했을 때,<br>
 
