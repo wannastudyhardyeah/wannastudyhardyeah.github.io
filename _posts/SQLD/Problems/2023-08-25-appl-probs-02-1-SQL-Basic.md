@@ -484,7 +484,9 @@ FROM DUAL;
 
 결과는 다음과 같다.<br>
 <!-- fig_003 -->
-
+<figure>
+    <img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-1-SQL-Basic/fig_003.jpg" width="100%">
+</figure>
 
 이러한 결과에 따라 다음과 같이 판단 가능하다.<br>
 
@@ -578,6 +580,10 @@ ISNULL(check_expression , replacement_value)
 
 그 결과는 ``0``도 아니고 ``NULL``도 아니고,<br>
 <!-- fig_004 -->
+<figure>
+    <img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-1-SQL-Basic/fig_004.jpg" width="100%">
+</figure>
+
 ``ORA-01476`` 넘버의 에러가 발생한다!!<br>
 이 에러는 ``ZERO_DIVIDE``라는 이름으로 정의되어 있다.<br>
 (출처: <a href="https://docs.oracle.com/cd/E21901_01/timesten.1122/e21639/exceptions.htm#BABFCJFD">Database PL/SQL Developer's Guide, ORACLE</a>)<br>
@@ -619,6 +625,9 @@ FROM TAB2;
 아래와 같은 결과를 확인 가능하다.<br>
 
 <!-- fig_005 -->
+<figure>
+    <img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-1-SQL-Basic/fig_005.jpg" width="100%">
+</figure>
 
 (근데, 이거 반복문으로 할 수 있을 것 같은데<br>
 &nbsp;SQL에선 어떻게 해야할지 아직 안 찾아봤다...)<br>
