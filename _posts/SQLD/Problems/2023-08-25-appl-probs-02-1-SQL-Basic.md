@@ -647,3 +647,70 @@ FROM TAB2;
 >All aggregate functions except ``COUNT``(*), ``GROUPING``, and ``GROUPING_ID`` ignore nulls.<br>
 <cite>출처: <a href="https://docs.oracle.com/cd/E11882_01/server.112/e41084/functions003.htm#SQLRF20035">"Database SQL Language Reference - Aggregate Functions", ORACLE</a></cite>
 
+<br>
+<hr width="50%">
+<h2 id="blank-sql"><b>52번 - 빈칸 SQL 고르기</b></h2>
+
+<!-- fig_006 -->
+<figure>
+    <img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-1-SQL-Basic/fig_006.JPG" width="100%">
+</figure>
+
+문제에서 제시하는 출력 명세<br>
+- 광고매체 ID별 최초로 게시한
+    - 광고명
+    - 광고시작일자
+
+그리고,<br>
+``광고게시`` 테이블에서<br>
+``광고ID``와 ``광고매체ID`` 칼럼이 각각<br>
+``광고``, ``광고매체`` 엔터티의 칼럼을 참조한다.<br>
+
+또한, 제시된 SQL문에서
+```sql
+SELECT  C.광고매체명, B.광고명, A.광고시작일자
+FROM    광고게시 A, 광고 B, 광고매체 C
+        (                   ) D
+WHERE   A.광고시작일자 = D.광고시작일자
+AND     A.광고매체ID = D.광고매체ID
+AND     A.광고ID = B.광고ID
+AND     A.광고매체ID = C.광고매체ID
+ORDER BY    C.광고매체명;
+```
+Alias가 ``D``로 지정된 테이블은 최소한<br>
+``광고시작일자``와 ``광고매체ID``가 칼럼임을 알 수 있고,<br>
+제시문에 의거할 때<br>
+"최초로 게시한 광고시작일자"를 선택하는 SQL 문장은<br>
+확인할 수 없다.
+
+```sql
+AND     A.광고ID = B.광고ID
+AND     A.광고매체ID = C.광고매체ID
+```
+이 두 문장은 FK 관계와 상관이 있는 것이고,<br>
+<br>
+```sql
+WHERE   A.광고시작일자 = D.광고시작일자
+AND     A.광고매체ID = D.광고매체ID
+```
+이 두 문장은 ``D``를 정확히 모르기 때문이다.<br>
+
+즉, 달리 말하면, ``D``에<br>
+"최초로 게시한" 정보를 선택하는 문장이 있다고 할 수 있다.<br>
+
+또한,<br>
+"최초"라는 걸 가려내기 위해 비교가 가능한 값은<br>
+``DATE`` 타입인 ``광고시작일자`` 칼럼의 값이다.<br>
+따라서, ``광고매체ID``가 ``MIN()`` 함수 인자로 있는<br>
+③번, ④번 선지는 부적절하다.<br>
+
+그리고,<br>
+이미 제시된 SQL문에서<br>
+```sql
+AND     A.광고매체ID = D.광고매체ID
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AND     A.광고매체ID = C.광고매체ID
+```
+이렇게 ``A.광고매체ID``를 매개로 하여<br>
+세 개의 칼럼의 값이 같은지 여부가 비교되었으므로<br>
+①번 선지는 부적절하다.<br>

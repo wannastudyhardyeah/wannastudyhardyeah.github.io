@@ -41,9 +41,10 @@ html {
 }
 
 .highlighter-rouge {
+  font-family: 'D2Coding';
   color: #3f596f; /* var(--highlighter-rouge-color); */
-  margin-top: 0.5rem;
-  margin-bottom: 1.2em; /* Override BS Inline-code style */
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem; /* Override BS Inline-code style */
 }
 
 .highlight {
@@ -93,11 +94,12 @@ code {
   hyphens: none;
   white-space: pre-wrap;
   color: #3f596f; // me
+  font-family: 'D2Coding';
 
   &.highlighter-rouge {
     color: #3f596f; // me
     font-size: $code-font-size;
-    padding: 3px 5px;
+    padding: 3px 3px;
     word-break: break-word;
     border-radius: 4px;
     background-color: var(--inline-code-bg);
@@ -158,10 +160,11 @@ div {
   &.language-plaintext,
   &.language-console,
   &.language-terminal {
+    font-family: 'D2Coding';
     pre.lineno {
       display: none;
     }
-
+    
     td.rouge-code {
       padding-left: 1.5rem;
     }
