@@ -653,7 +653,7 @@ FROM TAB2;
 
 <!-- fig_006 -->
 <figure>
-    <img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-1-SQL-Basic/fig_006.JPG" width="100%">
+    <img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-1-SQL-Basic/fig_006.jpg" width="100%">
 </figure>
 
 문제에서 제시하는 출력 명세<br>
