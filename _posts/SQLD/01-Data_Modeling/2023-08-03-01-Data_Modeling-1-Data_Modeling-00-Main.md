@@ -31,11 +31,8 @@ math: true
 <hr width="50%">
 <h2>제2절 엔터티<span style="color: #808080;">entity</span></h2>
 
-<b>기존</b><br>
 &nbsp;- <a href="https://wannastudyhardyeah.github.io/posts/01-Data_Modeling-1-Data_Modeling-02-elementary-concept-data-model/" target="blank">2. 데이터 모델의 기본 개념 이해</a><br>
 
-<b>상대경로 적용</b><br>
-&nbsp;- <a href="../SQLD/2023-08-03-01-Data_Modeling-2-Entity-01.md" target="blank">엔터티</a><br>
 <br>
 <hr width="50%">
 <h2>제3절 속성<span style="color: #808080;">attribute</span></h2>
