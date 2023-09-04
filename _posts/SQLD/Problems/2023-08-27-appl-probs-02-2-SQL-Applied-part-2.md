@@ -348,7 +348,7 @@ GROUP BY CUBE (S.SERVICE_ID, J.MEMBER_NUMBER);
 
 그리고,<br>
 ``GROUPING SETS``의 인자는<br>
-'A', 'B', 'A, B', '[공집합](=총계)'로,<br>
+'A', 'B', 'A, B', '[공집합](&#61;총계)'로,<br>
 ``CUBE``의 경우와 동일하다고 할 수 있다.<br>
 
 <br>
