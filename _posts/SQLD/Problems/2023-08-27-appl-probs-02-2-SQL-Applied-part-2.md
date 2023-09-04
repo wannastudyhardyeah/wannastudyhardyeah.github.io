@@ -354,7 +354,7 @@ GROUP BY CUBE (S.SERVICE_ID, J.MEMBER_NUMBER);
 <br>
 <hr width="50%">
 <h2 id="partition-and-group-by-aka-window"><b>112번 - 윈도우 함수, <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.3rem;">PARTITION</code>, <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.3rem;">GROUP BY</code></b>란?</h2>
-
+&nbsp;
 <b style="1.25rem">윈도우 함수의 구문 형식</b><br>
 
 ```sql
