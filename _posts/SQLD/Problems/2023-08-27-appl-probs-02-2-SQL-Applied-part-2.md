@@ -359,34 +359,6 @@ FROM [테이블명];
 <h3 id="types-of_window-func-h3"><code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.3rem;">PARTITION BY</code></h3>
 &nbsp;&nbsp;전체 집합을 기준에 의해 소그룹으로 나눔.<br>
 
-
-<br>
-<hr width="50%">
-<h2 id="subquery-prob"><b>95번 - 서브쿼리 설명</b></h2>
-
-- 서브쿼리의 결과가 복수 행 결과 반환하는 경우엔<br>
-``IN``, ``ALL``, ``ANY`` 등의 복수 행 비교 연산자와 같이 사용!!<br>
-
-- 다중 칼럼 서브쿼리의 결과로 여러 개의 칼럼 반환되어<br>
-메인 쿼리의 조건과 비교가 됨.<br>
-이건 SQL Server는 지원 X.<br>
-
-
-<br>
-<hr width="50%">
-<h2 id="subquery-prob-2"><b>99번 - 서브쿼리 설명 2</b></h2>
-
-- 서브쿼리 결과가 2건 이상 반환 가능성 있다면<br>
-==> 다중 행 비교 연산자<br>
-
-- 연관 서브쿼리<span style="color: #808080;">Correlated Subquery</span><br>
-\: 서브쿼리 내에 메인쿼리 칼럼 사용된 서브쿼리.<br>
-e.g. - 선수 자신이 속한 팀의 평균 키보다 작은 선수들 정보 출력<br>
-
-- ``EXISTS`` 서브쿼리는 항상 연관 서브쿼리로 사용됨.
-
-<b style="color:red; font-size:1.4rem;">&nbsp;★</b><b style="font-size:1.2rem;"> <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.2em;">EXISTS</code> 서브쿼리는<br>조건 만족하는 1건만 찾으면 추가 검색 진행 X</b><br>
-
 <br>
 <hr width="50%">
 <h2 id="subquery-prob-3"><b>100번 - 서브쿼리 설명 3</b></h2>
