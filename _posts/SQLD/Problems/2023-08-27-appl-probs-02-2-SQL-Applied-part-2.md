@@ -11,6 +11,10 @@ mermaid: true
 <h2 id="correlative-subquery"><b>102번 - 연관 서브쿼리</b></h2>
 
 <!-- fig_001 -->
+<figure align="left">
+    <figure align="left"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-2-SQL-Applied-part-2/fig_001.jpg" width="100%"></figure>
+</figure>
+
 제시된 반영 조건과 테이블을 고려할 때,<br>
 ``부서임시`` 테이블에서는<br>
 각 ``부서코드`` 별로 ``변경일자``가 가장 최근인 것을 고르고,<br>
@@ -162,6 +166,8 @@ GROUP BY J.SERVICE_ID;
 
 <!-- fig_002 -->
 <!-- fig_003 -->
+<figure align="left"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-2-SQL-Applied-part-2/fig_002.jpg" width="100%"></figure>
+<figure align="left"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-2-SQL-Applied-part-2/fig_003.jpg" width="100%"></figure>
 
 즉, ``ROLLUP``은<br>
 ``GROUP BY``로 집계된 <b style="color:red">각 그룹의 SUBTOTAL을 계산</b>한다.<br>
@@ -190,6 +196,8 @@ GROUP BY ROLLUP(J.SERVICE_ID);
 
 <!-- fig_004 -->
 <!-- fig_005 -->
+<figure align="left"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-2-SQL-Applied-part-2/fig_004.jpg" width="60%"></figure>
+<figure align="left"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-2-SQL-Applied-part-2/fig_005.jpg" width="60%"></figure>
 
 즉, ``GROUPING``은<br>
 ``ROLLUP``이나 ``CUBE``로 소계가 계산된 결과에는<br>
@@ -236,7 +244,7 @@ GROUP BY ROLLUP(DNAME, JOB);
 위 SQL문의 결과는 아래와 같다.<br>
 
 <!-- fig_006 -->
-
+<figure align="left"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-2-SQL-Applied-part-2/fig_006.jpg" width="100%"></figure>
 
 <br>
 <hr width="50%">
@@ -288,7 +296,7 @@ INSERT INTO SERVICE_JOIN VALUES('3', '003', TO_DATE('2013-01-03', 'YYYY-MM-DD'),
 
 위의 SQL문에 대한 결과는 아래와 같다.<br>
 <!-- fig_007 -->
-
+<figure align="left"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-2-SQL-Applied-part-2/fig_007.jpg" width="100%"></figure>
 
 ```sql
 /*
@@ -301,6 +309,7 @@ GROUP BY CUBE (S.SERVICE_ID, J.MEMBER_NUMBER);
 이때, CUBE의 인자 두 개의 순서를 바꾸면 아래와 같다.<br>
 
 <!-- fig_008 -->
+<figure align="left"><img src="https://raw.githubusercontent.com/wannastudyhardyeah/wannastudyhardyeah.github.io/master/images/SQLD/Problems/2023-08-25-appl-probs-02-2-SQL-Applied-part-2/fig_008.jpg" width="100%"></figure>
 
 즉, 정렬 순서는 바뀔 수 있어도,<br>
 근본적인 데이터 자체는 동일하다.<br>
