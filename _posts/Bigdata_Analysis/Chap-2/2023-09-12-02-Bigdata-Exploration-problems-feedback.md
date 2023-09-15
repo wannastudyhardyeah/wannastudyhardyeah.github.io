@@ -527,4 +527,111 @@ $Z = \dfrac{X - \mu}{\sigma}$
 
 <br>
 <hr width="50%">
-<h2 id="correlation-analysis-49-h2"><b>49</b></h2>
+<h2 id="mean-median-mode-49-h2"><b>49. 평균, 중앙값, 최빈값</b></h2>
+
+왜도<span style="color: #808080;">Skewed</span><br>
+- 양수일 때<br>
+오른쪽으로 긴 꼬리<br>
+<b>==></b> $\text{Mode} < \text{Median} < \text{Mean} $
+
+- 음수일 때<br>
+왼쪽으로 긴 꼬리<br>
+<b>==></b> $\text{Mean} < \text{Median} < \text{Mode} $
+
+<br>
+<hr width="50%">
+<h2 id="proper-median-50-h2"><b>50. 중앙값</b></h2>
+
+선수의 연봉이 <b style="color:red">매우 높은 상위권</b>에 분포<br>
+<b>==></b> 중앙값이 적절.<br>
+
+<br>
+<hr width="50%">
+<h2 id="descriptive-51-h2"><b>51. 기술 통계</b></h2>
+
+- 중심 경향 통계량
+    - 평균
+    - 중위수
+    - 최빈값
+
+- 산포도 통계량
+    - 범위
+    - 분산
+    - 표준편차
+    - 평균의 표준오차
+
+- 분포 통계량
+    - 첨도
+    - 왜도
+
+<br>
+<hr width="50%">
+<h2 id="outlier-for-mean-and-median-53-h2"><b>53. 평균과 중앙값 - 이상값 / 변동계수</b></h2>
+
+- 평균<br>
+\: (전체 합) / (개수) 이므로<br>
+<b>==></b> 이상값에 민감<br>
+
+- 중앙값<br>
+\: 가운데 위치하는 값<br>
+<b>==></b> 이상값에 민감 <b>X</b><br>
+
+- 변동계수<br>
+\: 표준편차를 산술평균을 기준으로 표준화시킨 것<br>
+<b>==></b> $\text{\bf CV} = \dfrac{s}{\bar{x}} $
+
+<br>
+<hr width="50%">
+<h2 id="sampling-types-56-h2"><b>56. (확률적)표본추출</b></h2>
+
+- <b>단순 무작위</b><span style="color: #808080;">Simple random</span> <b>추출</b><br>
+    - 모집단의 각 개체가 표본으로 선택될 확률이<br>
+    동일하게 추출되는 것<br>
+    - 개별 개체 선택 확률<br>
+    <b>==></b> $\dfrac{n}{N}$<br>
+    ($N$: 모집단 개체 수, $n$: 표본 수)<br>
+
+- <b>계통</b><span style="color: #808080;">Systematic</span> <b>추출</b><br>
+    - 모집단 개체에 일련번호 부여 후,<br>
+    첫 번째 표본을 임의 선택 후<br>
+    일정한 간격으로 다음 표본 선택<br>
+
+- <b>층화</b><span style="color: #808080;">Stratified</span> <b>추출</b><br>
+    - 이질적 원소들로 구성된 모집단에서<br>
+    각 계층 고루 대표되도록 표본 추출함.<br>
+    - 모집단을 서로 겹치치 않는 층들로 나누고,<br>
+    각 층에서 단순확률표본 추출.<br>
+    (<b style="color:red">집단 간 이질적, 집단 내 동질적</b>)<br>
+    - 층: 성별, 나이대, 지역 등 차이 존재하는 그룹<br>
+
+- <b>군집</b><span style="color: #808080;">Cluster</span> <b>추출</b><br>
+    - <b style="color:red">집단 내 서로 이질적, 집단 간 서로 동질적</b><br>
+    - 집단 중 몇 개 선택 후,<br>
+    선택 집단 내에서 필요한 만큼을 임의 선택<br>
+
+<br>
+<hr width="50%">
+<h2 id="sampling-error-h2"><b>59. 표본오차</b></h2>
+
+- 표본(추출) 오차<br>
+    - 모집단 대표 못하는 표본 추출하여<br>
+    발생하는 오차<br>
+    - 전수조사가 아니라<br>
+    표본 추출하므로 발생하는 오차.<br>
+    - <b style="color:red">표본오차를 표본 크기 커지면 작아짐!!</b><br>
+    <b>==></b> 전수조사에선 $0$임.<br>
+
+- 비표본 추출 오차<br>
+    - 표본오차 제외한,<br>
+    집계, 조사, 분석 과정에서 발생가능한 모든 오차.<br>
+    - 표본 크기에 비례하여 커짐.<br>
+
+- 표본 편의<span style="color: #808080;">bias</span><br>
+    - 표본추출 과정에서<br>
+    발생하는 편의(bias)<br>
+    (편의: 추정값의 기댓값과, 모수의 차이)<br>
+    - 확률화에 의해 최소화 or 제거 가능<br>
+
+<!-- <br>
+<hr width="50%">
+<h2 id="sampling-error-h2"><b>60. </b></h2> -->
