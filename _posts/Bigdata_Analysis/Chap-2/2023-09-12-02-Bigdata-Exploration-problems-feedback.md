@@ -632,6 +632,25 @@ $Z = \dfrac{X - \mu}{\sigma}$
     (편의: 추정값의 기댓값과, 모수의 차이)<br>
     - 확률화에 의해 최소화 or 제거 가능<br>
 
-<!-- <br>
+<br>
 <hr width="50%">
-<h2 id="sampling-error-h2"><b>60. </b></h2> -->
+<h2 id="poisson-dist-60-h2"><b>60 ~ 61. 포아송 분포, 기댓값/분산 성질</b></h2>
+
+기댓값은 $E(X) = \lambda$이고,<br>
+분산은 $V(X) = \lambda$이다.<br>
+즉,<br>
+$E(\dfrac{3X+2Y}{6})$<br>
+= $E(\dfrac{1}{2}X + \dfrac{1}{3}Y)$<br>
+= $\dfrac{1}{2}E(X) + \dfrac{1}{3}E(Y)$ 이고,<br>
+<br>
+$\text{Var}(\dfrac{3X+2Y}{6})$<br>
+= $\text{Var}(\dfrac{1}{2}X + \dfrac{1}{3}Y)$<br>
+= $\dfrac{1}{2}\text{Var}(X) + \dfrac{1}{3}\text{Var}(Y)$ 이다.<br>
+
+<br>
+<hr width="50%">
+<h2 id="bernouli-dist-63-h2"><b>63. 베르누이 분포</b></h2>
+
+특정 실험에서 매 시행마다<br>
+가능한 결과가 오직 두 가지마다 일어날 때,<br>
+이런 실험을 1회 시행하여 일어난~ 분포<br>
