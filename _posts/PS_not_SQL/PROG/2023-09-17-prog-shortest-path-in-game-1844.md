@@ -3,7 +3,7 @@ title: PS) 게임 맵 최단거리
 author: wannastudyhardyeah
 date: 2023-09-17 08:01:30 +0800
 categories: [PS]
-tags: [Python, PS, Programmers]
+tags: [Python, PS, Programmers, BFS]
 math: true
 mermaid: true
 
