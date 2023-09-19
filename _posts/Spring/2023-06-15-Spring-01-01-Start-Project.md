@@ -3,7 +3,7 @@ title: 1.1. 프로젝트 생성
 author: wannastudyhardyeah
 date: 2023-06-15 01:17:00 +0800
 categories: [Spring]
-tags: [Spring, JAVA]
+tags: [Spring, Java]
 math: true
 
 ---

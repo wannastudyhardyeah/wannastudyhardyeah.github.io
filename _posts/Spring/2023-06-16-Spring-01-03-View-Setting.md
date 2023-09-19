@@ -3,7 +3,7 @@ title: 1.3. View 환경설정
 author: wannastudyhardyeah
 date: 2023-06-16 01:18:00 +0800
 categories: [Spring]
-tags: [Spring, JAVA]
+tags: [Spring, Java]
 math: true
 
 ---
