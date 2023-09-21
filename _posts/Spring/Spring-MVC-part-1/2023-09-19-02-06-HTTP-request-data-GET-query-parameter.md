@@ -16,25 +16,47 @@ tags: [Java, Spring]
 - ``username=hello``<br>
 - ``age=20``<br>
 
-<h3>1.1. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.25rem;"><b>GET</b></code> - 쿼리 패러미터</h3>
+메시지 바디 없이,<br>
+URL의 쿼리 패러미터 이용하여 데이터 전달!<br>
+(검색, 필터, 페이징 등에서 많이 사용됨.)<br>
 
-- ``/url?username=hello&age=20``<br>
-- 메시지 바디 없이<br>
-URL의 쿼리 패러미터에 데이터 포함해서 전달<br>
-(검색, 필터, 페이징 등에서 많이 사용)<br>
+<h3>1.1. 쿼리 패러미터 조회 메서드</h3>
 
-<h3>1.2. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.25rem;"><b>POST</b></code> - HTML Form</h3>
+```java
+// 단일 패러미터 조회
+String username = request.getParameter("username");
+// 패러미트 이름들 모두 조회
+Enumeration<String> parameterNames
+                    = request.getParameterNames();
+// 패러미터를 Map으로 조회
+Map<String, String[]> parameterMap
+                    = request.getParameterMap();
+// 복수 패러미터 조회
+String[] usernames = request.getParameterValues("username");
+```
 
-- ``content-type``: ``application/x-www-form-urlencoded``<br>
-- 메시지 바디에 쿼리 패러미터 형식으로 전달<br>
-=> ``username=hello&age=20``<br>
-(회원 가입, 상품 주문, HTML Form 사용)
+<b><code class="language-java highlighter-rouge" style="color: #83060e; font-size: 1.25rem;">RequestParamServlet</code></b><br>
 
-<h3>1.3. <code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.25rem;"><b>HTTP message body</b></code>에 데이터 직접 담아서 요청</h3>
-
-- HTTP API에서 주로 사용(REST API)<br>
-(JSON, XML, TEXT)<br>
-- 데이터 형식은 주로 JSON 사용<br>
-- POST, PUT, PATCH<br>
-
-
+```java
+@WebServlet(name="RequestParamServlet",
+            urlPatterns="/request-param")
+public class RequestParamServlet 
+                    extends HttpServlet {
+    @Override
+    protected void service(~~ request, ~~ response)
+                    throws ServletException, IOException {
+        // 전체 패러미터 조회
+        request.getParameterNames().asIterator()
+                .forEachRemaining(paramName
+                        -> Sout(paramName + " = "
+                        request.getParameter(paramName)));
+        
+        // 이름이 같은 복수 패러미터 조회
+        String[] usernames
+                = request.getParameterValues("username");
+        for (String name : usernames) {
+            Sout("username=" + name);
+        }
+    }
+}
+```
