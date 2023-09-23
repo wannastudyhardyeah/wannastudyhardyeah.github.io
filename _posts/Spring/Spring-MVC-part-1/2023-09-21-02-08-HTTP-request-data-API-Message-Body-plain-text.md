@@ -1,7 +1,7 @@
 ---
 title: 섹션2 서블릿) HTTP 요청 데이터 - API 메시지 바디 - 단순 텍스트
 author: wannastudyhardyeah
-date: 2023-09-20 10:10:00 +0800
+date: 2023-09-21 10:10:00 +0800
 categories: [Spring-MVC-inflearn]
 tags: [Java, Spring]
 
@@ -91,21 +91,3 @@ protected void service() throws ~ {
 ```powershell
 messageBody = org.apache.catalina.connector.CoyoteInputStream@52fc42ff
 ```
-
-<div style="position: relative; display: inline-block; text-align: left; padding: 5px; height: 100%; border: 1px dotted black;"><b style="color:red">Cf)</b> content-type은<br>&nbsp;&nbsp;&nbsp;&nbsp;HTTP 메시지 바디의 데이터 형식을 지정.<br>
-<br>
-<b>-</b> GET URL 쿼리 패러미터 형식으로 전달 시,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;HTTP 메시지 바디 미사용하므로 없음.<br>
-<b>-</b> POST HTML Form 형식으로 전달 시,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;HTTP 메시지 바디에 해당 데이터 포함해 보내므로<br>
-바디에 포함된 데이터의 형식을 꼭 지정!!!<br>
-</div>
-
-<h3>1.1.2. Postman 사용한 테스트</h3>
-HTML Form 사용 안 하고<br>
-Postman을 이용해도 됨.<br>
-
-- <b>Body</b><br>
-``x-www-form-urlencoded`` 선택<br>
-- 헤더의 ``Content-Type``<br>
-``application/x-www-form-urlencoded``<br>
