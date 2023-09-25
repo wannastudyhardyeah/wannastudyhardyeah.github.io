@@ -51,6 +51,8 @@ public class Member {
 }
 ```
 
+<h3 id="member-repository-h3">1.2. 회원 저장소</h3>
+
 동일 디렉터리에<br>
 ``MemberRepository.java`` 생성.<br>
 
@@ -98,5 +100,62 @@ public class MemberRepository {
         store.clear();
     }
 }
+```
 
+테스트 코드 작성
+
+```java
+class MemberRepositoryTest {
+
+    MemberRepository memberRepository = MemberRepository.getInstance();
+
+    @AfterEach
+    void afterEach() {
+        // clearstore() 없이 실행 시 문제 생김
+        // 데이터 저장 관련 문제 (순서 보장 X)
+        memberRepository.clearStore();
+    }
+
+    @Test
+    void getInstance() {
+    }
+
+    @Test
+    void save() {
+        // given
+        Member member = new Member("hello", 20);
+
+        // when
+        Member savedMember = memberRepository.save(member);
+
+        // then
+        Member findMember = memberRepository.findById(savedMember.getId());
+        Assertions.assertThat(findMember).isEqualTo(savedMember);
+    }
+
+    @Test
+    void findById() {
+    }
+
+    @Test
+    void findAll() {
+        // given
+        Member member1 = new Member("member1", 20);
+        Member member2 = new Member("member2", 30);
+
+        memberRepository.save(member1);
+        memberRepository.save(member2);
+
+        // when
+        List<Member> result = memberRepository.findAll();
+
+        // then
+        Assertions.assertThat(result.size()).isEqualTo(2);
+        Assertions.assertThat(result).contains(member1, member2);
+    }
+
+    @Test
+    void clearStore() {
+    }
+}
 ```
