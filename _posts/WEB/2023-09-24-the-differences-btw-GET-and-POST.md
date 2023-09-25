@@ -7,7 +7,7 @@ tags: [HTTP, Network]
 math: true
 
 ---
-<h2 id="get-method-h2"><code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.3rem;">GET</code> 메서드</h2>
+<h2 id="get-method-h2"><code class="language-javascript highlighter-rouge" style="color: #83060e; font-size: 1.3rem;">GET</code> 메서드</h2>
 &nbsp;&nbsp;``GET`` 요청 보낼 때<br>
 본문<span style="color: #808080;">body</span>이나 페이로드<span style="color: #808080;">payload</span>를 보내게 되면,<br>
 요청 거부당할 수도 있음.<br>
@@ -39,7 +39,7 @@ But, 그 역<span style="color: #808080;">reverse</span>은 성립 X</div>
 \: <b style="color:red">O</b><br>
 
 <hr width="50%">
-<h2 id="get-method-h2"><code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.3rem;">POST</code> 메서드</h2>
+<h2 id="post-method-h2"><code class="language-javascript highlighter-rouge" style="color: #83060e; font-size: 1.3rem;">POST</code> 메서드</h2>
 &nbsp;&nbsp;보통 HTML 양식<span style="color: #808080;">forms</span>을 통해 전송.<br> 이로써 서버에 변경사항 만듦.<br>
 <br>
 &nbsp;&nbsp;``<form>`` 요소<span style="color: #808080;">element</span>의 ``enctype`` 특성<span style="color: #808080;">attribute</span>이나<br>
@@ -68,4 +68,5 @@ But, 그 역<span style="color: #808080;">reverse</span>은 성립 X</div>
 - 캐시<span style="color: #808080;">cache</span> 가능 여부<br>
 \: <b style="color:red">fresh</b>한 응답이 담겼을 때만!!<br>
 [참조](https://httpwg.org/specs/rfc7234.html#expiration.model)<br>
-- HTML 양식<span style="color: #808080;">forms</span>에서 사용 가능 <b style="color:red">O</b><br>
+- HTML 양식<span style="color: #808080;">forms</span>에서 사용 가능<br>
+\: <b style="color:red">O</b><br>
