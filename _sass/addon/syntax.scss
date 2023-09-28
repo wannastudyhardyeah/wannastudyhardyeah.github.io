@@ -42,7 +42,7 @@ html {
 
 .highlighter-rouge {
   font-family: 'D2Coding';
-  color: #3f596f; /* var(--highlighter-rouge-color); */
+  color: #b01662; /* var(--highlighter-rouge-color); */
   margin-top: 0.25rem;
   margin-bottom: 0.5rem; /* Override BS Inline-code style */
 }
@@ -93,11 +93,11 @@ code {
   -ms-hyphens: none;
   hyphens: none;
   white-space: pre-wrap;
-  color: #3f596f; // me
+  color: #b01662; // me
   font-family: 'D2Coding';
 
   &.highlighter-rouge {
-    color: #3f596f; // me
+    color: #b01662; // me
     font-size: $code-font-size;
     padding: 3px 3px;
     word-break: break-word;
