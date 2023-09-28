@@ -7,6 +7,8 @@ tags: [Spring, Java]
 math: true
 
 ---
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/annotation/AliasFor.html">출처: Package org.springframework.core.annotation / Annotation Interface AliasFor</a>
+<hr="50%">
 <h2 id="what-is-annotation-h2">애너테이션(어노테이션)이란?</h2>
 
 &nbsp;&nbsp;&nbsp;&nbsp;코드에서 ``@``으로 작성되는 요소.<br>
