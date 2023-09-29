@@ -20,7 +20,7 @@ math: true
 > <div style="color:black; font-size:1.15rem">Annotations, a form of metadata, provide data about a program that is not part of the program itself. Annotations have no direct effect on the operation of the code they annotate.</div>
 
 애너테이션은 프로그램 자기 자신을<br>
-포함하지 않는 데이터를 제공하는,<br>
+포함하지 않는 데이터를 제공하며<br>
 메타데이터 형식으로 된 것이다.<br>
 해당 애너테이션은 그 코드에 대해선<br>
 직접적인 영향을 주진 않는다.<br>
