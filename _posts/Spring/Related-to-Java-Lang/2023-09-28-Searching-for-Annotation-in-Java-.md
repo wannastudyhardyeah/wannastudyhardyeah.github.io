@@ -193,19 +193,3 @@ Example: Transitive Implicit Aliases within an Annotation<br>
 내부 속성 alias들을 설정하는 것으로 업데이트 되었다.<br>
 세부 사항은 javadoc의 개별 애너테이션 부분과<br>
 레퍼런스 매뉴얼을 참조하면 된다.<br>
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
