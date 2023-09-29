@@ -24,6 +24,7 @@ math: true
 메타데이터 형식으로 된 것이다.<br>
 해당 애너테이션은 그 코드에 대해선<br>
 직접적인 영향을 주진 않는다.<br>
+(출처: <a href="https://docs.oracle.com/javase/tutorial/java/annotations/">오라클 - 자바 튜토리얼의 애너테이션 부분 中</b>)<br>
 <br>
 > <div style="color:black; font-size:1.15rem"> Annotations have a number of uses, among them:<br>
 ><br>
@@ -153,5 +154,58 @@ In <code class="language-java highlighter-rouge" style="color: #9E880D; font-siz
     String[] xmlFiles() default {};
  }
 ```
-<!-- <h3 id="transitive-implicit-aliases-within-an-annotation-h3">예제 - 단일 애너테이션 내의 암묵적 변환 alias</h3>
-Example: Transitive Implicit Aliases within an Annotation -->
+<h3 id="transitive-implicit-aliases-within-an-annotation-h3">예제 - 단일 애너테이션 내의 암묵적 변환 alias</h3>
+Example: Transitive Implicit Aliases within an Annotation<br>
+
+<code class="language-java highlighter-rouge" style="color: #9E880D; font-size: 0.95rem;">@GroovyOrXmlTestConfig</code>에서, ``groovy``는<br>
+<code class="language-java highlighter-rouge" style="color: #9E880D; font-size: 0.95rem;">@MyTestConfig</code>의 ``groovyScripts``를 명시적으로 오버라이드한 것이다.<br>
+그런 반면, ``xml``은 마찬가지로<br>
+<code class="language-java highlighter-rouge" style="color: #9E880D; font-size: 0.95rem;">@ContextConfiguration</code>의 ``locations`` 속성에 대하여<br>
+명시적으로 오버라이드한 것이다.<br>
+<br>
+이에 따라,<br>
+``groovy``와 ``xml``은 둘 모두<br>
+<code class="language-java highlighter-rouge" style="color: #9E880D; font-size: 0.95rem;">@ContextConfiguration</code>의 ``locations``를<br>
+오버라이드한 것의 효과를 지니므로<br>
+이 둘은 서로에 대하여 암묵적 변환 alias이다.<br>
+서로에 대하여<br>
+
+```java
+@MyTestConfig
+ public @interface GroovyOrXmlTestConfig {
+
+    @AliasFor(annotation = MyTestConfig.class,
+              attribute = "groovyScripts")
+    String[] groovy() default {};
+
+    @AliasFor(annotation 
+                  = ContextConfiguration.class,      
+              attribute = "locations")
+    String[] xml() default {};
+ }
+```
+
+<h3 id="spring-annotations-supporting-attribute-aliases-h3">스프링 애너테이션 중 속성 Alias들을 지원하는 것</h3>
+
+스프링 프레임워크 4.2 기준으로,<br>
+스프링에서 핵심이 되는 몇몇 애너테이션은<br>
+<code class="language-java highlighter-rouge" style="color: #9E880D; font-size: 0.95rem;">@AliasFor</code>를 사용함으로써<br>
+내부 속성 alias들을 설정하는 것으로 업데이트 되었다.<br>
+세부 사항은 javadoc의 개별 애너테이션 부분과<br>
+레퍼런스 매뉴얼을 참조하면 된다.<br>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -1,5 +1,5 @@
 ---
-title: 실전문제) 1장 - 데이터 모델링 이해
+title: 실전문제) 1과목 1장 - 데이터 모델링 이해
 author: wannastudyhardyeah
 date: 2023-08-22 13:10:30 +0800
 categories: [SQLD]
