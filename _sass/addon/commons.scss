@@ -1588,3 +1588,23 @@ $btn-mb: 0.5rem;
     }
   }
 } /* min-width: 1650px */
+
+.toc-multiple-posts {
+  margin-top: 1rem;
+  padding: 1.5rem 1.5rem;
+  background: #F8F9FA;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 4px 0px;
+  position: relative;
+
+  .active {
+    color: #3512d2; 
+    font-weight: bold;
+  }
+} /* attribute i added */
+
+.series-number {
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
