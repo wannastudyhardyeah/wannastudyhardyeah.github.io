@@ -11,6 +11,7 @@ math: true
 <h2>스프링 애너테이션<span style="color: #808080;">Annotation</span> 시리즈</h2>
 <ol class="sc-fmciRz gyCSrP"><li><a href="/posts/Searching-for-Annotation-in-Java/">Java의 Annotation 알아보기</a></li>
 <li><a href="/posts/Searching-for-Annotation-AliasFor-in-Java/" aria-current="page" class="active">Java의 Annotation 알아보기 - &#64;AliasFor</a></li>
+<li><a href="/posts/Searching-for-Annotation-Component-in-Java/">Java의 Annotation 알아보기 - &#64;Component</a></li>
 </ol><div class="sc-fIosxK hRRhWV"><div class="sc-gUQvok eBShCz">
 <div class="series-number" align="right">2/3</div>
 </div></div>
