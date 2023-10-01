@@ -23,11 +23,14 @@ math: true
 <h2 id="what-is-annotation-h2"><code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.35rem;">@Component</code></h2>
 
 ```java
-@Target(TYPE)
-@Retention(RUNTIME)
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Indexed
-public @interface Component
+public @interface Component {
+
+	String value() default "";
+}
 ```
 
 > <div style="color:black; font-size:1.15rem">Indicates that an annotated class is a "component". Such classes are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.

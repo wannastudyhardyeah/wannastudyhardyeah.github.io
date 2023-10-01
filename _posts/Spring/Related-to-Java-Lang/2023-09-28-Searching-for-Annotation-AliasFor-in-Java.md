@@ -21,6 +21,23 @@ math: true
 <hr width="50%">
 <h2 id="alias-for-annotation-h2"><code class="language-java highlighter-rouge" style="color: #83060e; font-size: 1.5rem;">AliasFor</code></h2>
 
+```java
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+@Documented
+public @interface AliasFor {
+
+	@AliasFor("attribute")
+	String value() default "";
+
+	@AliasFor("value")
+	String attribute() default "";
+
+	Class<? extends Annotation> annotation() 
+      default Annotation.class;
+}
+```
+
 <h3 id="usage-scenarios">사용 사례들</h3>
 
 - <b>Explicit aliases within an annotation</b><br>

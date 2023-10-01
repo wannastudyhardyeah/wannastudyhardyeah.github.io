@@ -23,11 +23,19 @@ math: true
 <h2 id="what-is-Configuration-annotation-h2"><code class="language-java highlighter-rouge" style="color: #83060e; font-size: 1.35rem;">@Configuration</code></h2>
 
 ```java
-@Target(TYPE)
-@Retention(RUNTIME)
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Component
-public @interface Configuration
+public @interface Configuration {
+
+	@AliasFor(annotation = Component.class)
+	String value() default "";
+
+	boolean proxyBeanMethods() default true;
+
+	boolean enforceUniqueMethods() default true;
+}
 ```
 
 > <div style="color:black; font-size:1.15rem">Indicates that a class declares one or more <code class="language-java highlighter-rouge" style="color: #83060e;">@Bean</code> methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime, for example:</div>
@@ -202,3 +210,40 @@ public class AppConfig {
 
 자세한 내용은<br>
 ``Environment``와 <code class="language-java highlighter-rouge" style="color: #9E880D;">@PropertySource</code> 문서를 참고하면 된다.<br>
+
+<h3 id="using-the-value-annotation-h3"> 2.2. <code class="language-java highlighter-rouge" style="color: #9E880D;">@Value</code> 애너테이션 사용</h3>
+
+<code class="language-java highlighter-rouge" style="color: #9E880D;">@Value</code> 애너테이션을 통하여<br>
+외부의 값이 <code class="language-java highlighter-rouge" style="color: #9E880D;">@Configuration</code> 클래스로 주입될 수 있다.<br>
+
+```java
+@Configuration
+@PropertySource("classpath:/com/acme/app.properties")
+public class AppConfig {
+
+    @Value("${bean.name}") String beanName;
+
+    @Bean
+    public MyBean myBean() {
+        return new MyBean(beanName);
+    }
+}
+```
+
+이러한 접근은<br>
+스프링의 ``PropertySourcesPlaceholderConfigurer`` 클래스와<br>
+결합할 때 자주 쓰이는데,<br>
+이 클래스는 XML 설정에서<br>
+``<context:property-placeholder>``나, 혹은<br>
+관련된 ``static`` <code class="language-java highlighter-rouge" style="color: #9E880D;">@Bean</code> 메서드를 통해<br>
+명시적으로 <code class="language-java highlighter-rouge" style="color: #9E880D;">@Configuration</code> 클래스에서<br>
+자동으로 활성화 된다.<br>
+
+그러나, 주지해야 할 부분은<br>
+그러한 <code class="language-java highlighter-rouge" style="color: #9E880D;">@Bean</code> 메서드를 통해<br>
+``PropertySourcesPlaceholderConfigurer`` 클래스를<br>
+명시적으로 등록하는 것은<br>
+placeholder 구분과 같은 설정을<br>
+커스텀하고자 할 때에나 필요하단 점이다.<br>
+
+(추가 중)
