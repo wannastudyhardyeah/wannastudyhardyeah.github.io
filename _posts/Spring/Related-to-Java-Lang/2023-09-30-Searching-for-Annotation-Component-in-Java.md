@@ -12,8 +12,9 @@ math: true
 <ol class="sc-fmciRz gyCSrP"><li><a href="/posts/Searching-for-Annotation-in-Java/">Java의 Annotation 알아보기 - 애너테이션</a></li>
 <li><a href="/posts/Searching-for-Annotation-AliasFor-in-Java/">Java의 Annotation 알아보기 - &#64;AliasFor</a></li>
 <li><a href="/posts/Searching-for-Annotation-Component-in-Java/" aria-current="page" class="active">Java의 Annotation 알아보기 - &#64;Component</a></li>
+<li><a href="/posts/Searching-for-Annotation-Configuration-in-Java/">Java의 Annotation 알아보기 - &#64;Configuration</a></li>
 </ol><div class="sc-fIosxK hRRhWV"><div class="sc-gUQvok eBShCz">
-<div class="series-number" align="right">3/3</div>
+<div class="series-number" align="right">3/4</div>
 </div></div>
 </div>
 
@@ -30,7 +31,7 @@ public @interface Component
 ```
 
 > <div style="color:black; font-size:1.15rem">Indicates that an annotated class is a "component". Such classes are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.
-Other class-level annotations may be considered as identifying a component as well, typically a special kind of component: e.g. the ``@Repository`` annotation or AspectJ's ``@Aspect`` annotation.</div>
+Other class-level annotations may be considered as identifying a component as well, typically a special kind of component: e.g. the <code class="language-java highlighter-rouge" style="color: #9E880D; font-size: 1.0rem;">@Repository</code> annotation or AspectJ's <code class="language-java highlighter-rouge" style="color: #9E880D; font-size: 1.0rem;">@Aspect</code> annotation.</div>
 
 ``@Component`` 애너테이션이 붙은 클래스를<br>
 "컴포넌트"임을 알려주고, 즉, 해당 클래스는<br>

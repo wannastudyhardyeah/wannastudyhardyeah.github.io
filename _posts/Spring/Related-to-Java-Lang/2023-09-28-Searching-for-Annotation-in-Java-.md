@@ -12,8 +12,9 @@ math: true
 <ol class="sc-fmciRz gyCSrP"><li><a href="/posts/Searching-for-Annotation-in-Java/" aria-current="page" class="active">Java의 Annotation 알아보기 - 애너테이션</a></li>
 <li><a href="/posts/Searching-for-Annotation-AliasFor-in-Java/">Java의 Annotation 알아보기 - &#64;AliasFor</a></li>
 <li><a href="/posts/Searching-for-Annotation-Component-in-Java/">Java의 Annotation 알아보기 - &#64;Component</a></li>
+<li><a href="/posts/Searching-for-Annotation-Configuration-in-Java/">Java의 Annotation 알아보기 - &#64;Configuration</a></li>
 </ol><div class="sc-fIosxK hRRhWV"><div class="sc-gUQvok eBShCz">
-<div class="series-number" align="right">1/3</div>
+<div class="series-number" align="right">1/4</div>
 </div></div>
 </div>
 
