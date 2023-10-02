@@ -18,7 +18,7 @@ math: true
 </div></div>
 </div>
 
-출처: <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/annotation/AliasFor.html">Package org.springframework.core.annotation / Annotation Interface AliasFor</a>
+출처: <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">Package org.springframework.core.annotation / Annotation Interface AliasFor</a>
 <hr width="50%">
 <h2 id="what-is-annotation-h2"><code class="language-sql highlighter-rouge" style="color: #83060e; font-size: 1.35rem;">@Component</code></h2>
 
