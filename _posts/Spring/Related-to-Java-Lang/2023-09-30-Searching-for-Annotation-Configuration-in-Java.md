@@ -246,4 +246,13 @@ public class AppConfig {
 placeholder 구분과 같은 설정을<br>
 커스텀하고자 할 때에나 필요하단 점이다.<br>
 
+특히, 빈 포스트-프로세서<span style="color: #808080;">post-processor</span>가<br>
+(``PropertySourcesPlaceholderConfigurer`` 등이 있다.)<br>
+``ApplicationContext``에 대한<br>
+내장된 값<span style="color: #808080;">embedded</span> resolver를<br>
+등록하지 않았다면,<br>
+스프링이 기본 내장 값 resolver를 등록하고<br>
+이는 ``Environment``에 등록된 속성 자원과는<br>
+반대의 placeholder를 생성하게 될 것이다.<br>
+
 (추가 중)
