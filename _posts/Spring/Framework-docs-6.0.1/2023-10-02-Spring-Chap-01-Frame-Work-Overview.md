@@ -2,16 +2,16 @@
 title: 스프링 프레임워크 - 1. 개요
 author: wannastudyhardyeah
 date: 2023-10-02 14:59:00 +0800
-categories: [Java]
+categories: [Spring-Doc]
 tags: [Spring, Java]
 math: true
 ---
 <div class="toc-multiple-posts">
 <h2>스프링 프레임워크 문서 읽기</h2>
-<ol class="sc-fmciRz gyCSrP"><a href="/posts/Searching-for-Annotation-in-Java/" aria-current="page" class="active">챕터 1. 개요</a><br>
-<a href="/posts/Searching-for-Annotation-AliasFor-in-Java/">챕터 2. 핵심 기술</a>
+<ol class="sc-fmciRz gyCSrP"><a href="/posts/Spring-Chap-01-Frame-Work-Overview/" aria-current="page" class="active">챕터 1. 개요</a><br>
+<a href="/posts/Spring-Chap-02-Core-Technologies/">챕터 2. 핵심 기술</a>
 </ol><div class="sc-fIosxK hRRhWV"><div class="sc-gUQvok eBShCz">
-<div class="series-number" align="right">2/4</div>
+<div class="series-number" align="right">1/2</div>
 </div></div>
 </div>
 <br>
