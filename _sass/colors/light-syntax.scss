@@ -69,10 +69,10 @@
 
   /* --- custom light colors --- */
   --language-border-color: rgba(172, 169, 169, 0.2);
-  --highlight-bg-color: #fcfcfc;
+  --highlight-bg-color: rgba(0, 0, 0, .05);
   --highlighter-rouge-color: #b01662 !important;
   --highlight-lineno-color: #959595;
-  --inline-code-bg: #f6f6f7;
+  --inline-code-bg: rgba(0, 0, 0, 0.05);
   --code-header-text-color: #a3a3a3;
   --code-header-muted-color: #e2e1e1;
   --code-header-icon-color: #c9c8c8;
@@ -80,6 +80,6 @@
   --code-snippets-color: #b01662;
 
   [class^='prompt-'] {
-    --inline-code-bg: #fbfafa;
+    --inline-code-bg: rgba(0, 0, 0, 0.05);
   }
 } /* light-syntax */

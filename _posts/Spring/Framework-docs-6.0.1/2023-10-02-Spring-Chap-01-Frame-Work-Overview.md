@@ -7,11 +7,17 @@ tags: [Spring, Java]
 math: true
 ---
 <div class="toc-multiple-posts">
-<h2>스프링 프레임워크 문서 읽기</h2>
+<b style="font-size:1.4rem">스프링 프레임워크 문서 읽기</b>
 <ol class="sc-fmciRz gyCSrP"><a href="/posts/Spring-Chap-01-Frame-Work-Overview/" aria-current="page" class="active">챕터 1. 개요</a><br>
-<a href="/posts/Spring-Chap-02-Core-Technologies/">챕터 2. 핵심 기술</a>
+챕터 2. 핵심 기술<br>
+&nbsp;&nbsp;2.1. IoC 컨테이너<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-1-introduction-to-the-spring-ioc-container-and-beans">2.1.1 스프링 IoC 컨테이너와 빈즈<span style="color: #808080;">Beans</span>에 대한 소개</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-2-container-overview">2.1.2. 컨테이너 개요</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-3-bean-overview">2.1.3. 빈<span style="color: #808080;">Bean</span> 개요</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-4-dependencies">2.1.4. 의존 관계<span style="color: #808080;">Dependencies</span></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-5-bean-scopes">2.1.5. 빈 스코프<span style="color: #808080;">Bean Scopes</span></a><br>
 </ol><div class="sc-fIosxK hRRhWV"><div class="sc-gUQvok eBShCz">
-<div class="series-number" align="right">1/2</div>
+<div class="series-number" align="right">1/6</div>
 </div></div>
 </div>
 <br>
