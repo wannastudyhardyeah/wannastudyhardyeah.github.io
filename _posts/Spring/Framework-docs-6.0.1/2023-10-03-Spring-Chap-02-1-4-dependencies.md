@@ -44,14 +44,14 @@ math: true
 &nbsp;&nbsp;생성자로 주입을 하게되면 대부분의 경우, 해결 불가능한 순환 의존 상황을 맞닦뜨릴 수 있다.<br>
 <br>
 &nbsp;&nbsp;예를 들어,<br>
-`Class` `A` 는 생성자를 통한 주입으로 `Class` `B`의 인스턴스를 필요로 하고, `Class` `B`도  생성자를 통한 주입으로 `Class` `A`의 인스턴스를 필요로 하는 상황을 상정해볼 수 있다.<br>
-이때, `Class` `A`와 `Class` `B`에 대하여 서로가 서로를 주입하도록 빈을 설정한다면, 스프링의 IoC 컨테이너는 런타임 단계에서 순환 참조circular reference를 감지하고는 `BeanCurrentlyInCreationException` 에러를 발생시킬 것이다.<br>
+<code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">Class</code> <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">A</code>는 생성자를 통한 주입으로 <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">Class</code> <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">B</code>의 인스턴스를 필요로 하고, <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">Class</code> <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">B</code>도  생성자를 통한 주입으로 <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">Class</code> <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">A</code>의 인스턴스를 필요로 하는 상황을 상정해볼 수 있다.<br>
+이때, <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">Class</code> <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">A</code>와 <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">Class</code> <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">B</code>에 대하여 서로가 서로를 주입하도록 빈을 설정한다면, 스프링의 IoC 컨테이너는 런타임 단계에서 순환 참조circular reference를 감지하고는 <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">Class</code> <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">BeanCurrentlyInCreationException</code> 에러를 발생시킬 것이다.<br>
 <br>
 &nbsp;&nbsp;한 가지 해결책은, 생성자를 사용하는 대신에 설정자setter를 이용하여 클래스를 설정하도록 코드를 고치는 것이다. 달리 말하면, 생성자를 통한 주입 대신에 설정자를 통한 주입만을 사용한다는 것이다. 즉, 이 방법은 그리 추천되지는 않는 방법이지만, 설정자 주입을 통해 순환 의존을 (에러 없이) 설정할 수 있을 것이다.<br>
 <br>
-&nbsp;&nbsp;이러한 특수 케이스가 아닌 경우에 빈 `A`와 빈 `B` 사이의 순환 의존 관계는, 한 쪽 빈이 다른 한 쪽으로 주입되어 그 자체로 완전한 설정이 이뤄질 것이다.(고전적인 닭-계란 문제처럼)</div>
+&nbsp;&nbsp;이러한 특수 케이스가 아닌 경우에 빈<span style="color: #808080;">bean</span> <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">A</code>와 빈 <code class="language-java highlighter-rouge" style="color: #b01662; font-size: 1.0rem;">B</code> 사이의 순환 의존 관계는, 한 쪽 빈이 다른 한 쪽으로 주입되어 그 자체로 완전한 설정이 이뤄질 것이다.(고전적인 닭-계란 문제처럼)</div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;빈 `A`가 빈 `B`에 대해 의존 관계를 가질 경우, 스프링 IoC 컨테이너는 빈 `B`를 먼저 완전히 설정하고, 그 다음에 빈 `A`에 있는 설정자 메서드를 불러온다.
+&nbsp;&nbsp;&nbsp;&nbsp;빈 ``A``가 빈 ``B``에 대해 의존 관계를 가질 경우, 스프링 IoC 컨테이너는 빈 ``B``를 먼저 완전히 설정하고, 그 다음에 빈 ``A``에 있는 설정자 메서드를 불러온다.
 
 달리 말하면,
 
