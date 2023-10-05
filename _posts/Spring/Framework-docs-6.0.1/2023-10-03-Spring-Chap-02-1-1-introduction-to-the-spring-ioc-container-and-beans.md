@@ -16,8 +16,11 @@ math: true
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-3-bean-overview">2.1.3. 빈<span style="color: #808080;">Bean</span> 개요</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-4-dependencies">2.1.4. 의존 관계<span style="color: #808080;">Dependencies</span></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-5-bean-scopes">2.1.5. 빈 스코프<span style="color: #808080;">Bean Scopes</span></a><br>
+챕터 5. 웹 서블릿 스택<br>
+&nbsp;&nbsp;5.1. 스프링 웹 MVC<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-05-1-3-annoted-controllers">5.1.3. 애너테이션<span style="color: #808080;">Annotated</span> 컨트롤러</a><br>
 </ol><div class="sc-fIosxK hRRhWV"><div class="sc-gUQvok eBShCz">
-<div class="series-number" align="right">2/6</div>
+<div class="series-number" align="right">2/7</div>
 </div></div>
 </div>
 <br>

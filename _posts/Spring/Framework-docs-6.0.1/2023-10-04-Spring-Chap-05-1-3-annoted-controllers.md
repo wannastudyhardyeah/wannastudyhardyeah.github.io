@@ -15,12 +15,12 @@ math: true
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-2-container-overview">2.1.2. 컨테이너 개요</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-3-bean-overview">2.1.3. 빈<span style="color: #808080;">Bean</span> 개요</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-4-dependencies">2.1.4. 의존 관계<span style="color: #808080;">Dependencies</span></a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-5-bean-scopes" aria-current="page" class="active">2.1.5. 빈 스코프<span style="color: #808080;">Bean Scopes</span></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-5-bean-scopes">2.1.5. 빈 스코프<span style="color: #808080;">Bean Scopes</span></a><br>
 챕터 5. 웹 서블릿 스택<br>
 &nbsp;&nbsp;5.1. 스프링 웹 MVC<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-05-1-3-annoted-controllers">5.1.3. 애너테이션<span style="color: #808080;">Annotated</span> 컨트롤러</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-05-1-3-annoted-controllers" aria-current="page" class="active">5.1.3. 애너테이션<span style="color: #808080;">Annotated</span> 컨트롤러</a><br>
 </ol><div class="sc-fIosxK hRRhWV"><div class="sc-gUQvok eBShCz">
-<div class="series-number" align="right">6/6</div>
+<div class="series-number" align="right">7/7</div>
 </div></div>
 </div>
 <br>
@@ -51,7 +51,7 @@ public class HelloController {
 &nbsp;&nbsp;&nbsp;&nbsp;아래 테이블은 공식적으로 지원하는 여섯 가지의 스코프에 대한 설명이다.<br>
 
 | <b>Scope</b> | <b>Description</b> |
-| singleton | {기본설정}<br>각 스프링 IoC 컨테이너의 단일 객체 인스턴스에 대한<br>단일 빈 정의의 범위<span style="color: #808080;">scope</span> |
+| singleton | <b>{기본설정}</b><br>각 스프링 IoC 컨테이너의 단일 객체 인스턴스에 대한<br>단일 빈 정의의 범위<span style="color: #808080;">scope</span> |
 | prototype | 여러 개의 객체 인스턴스들에 대한<br>단일 빈 정의의 범위 |
 | request | 단일 HTTP 요청의 생명주기<span style="color: #808080;">lifecycle</span>에 대한<br>단일 빈 정의의 범위.<br>즉, 각 HTTP 요청은 싱글 빈 정의로부터 생성된<br>단일 빈의 인스턴스를 가진다.<br>웹 개발에 ``ApplicationContext``를 사용할 경우 사용가능. |
 | session | 하나의 HTTP ``session``의 생명주기에 대한 <br>단일 빈 정의의 범위.<br>웹 개발에 ``ApplicationContext``를 사용할 경우 사용가능. |
