@@ -252,8 +252,8 @@ placeholder 구분과 같은 설정을<br>
 내장된 값<span style="color: #808080;">embedded</span> resolver를<br>
 등록하지 않았다면,<br>
 스프링이 기본 내장 값 resolver를 등록하고<br>
-이는 ``Environment``에 등록된 속성 자원과는<br>
-반대의 placeholder를 생성하게 될 것이다.<br>
+이는 ``Environment``에 등록된 속성 자원에 대응되는<br>
+placeholder를 생성하게 될 것이다.<br>
 <code class="language-java highlighter-rouge" style="color: #9E880D;">@ImportResource</code>를 이용한 스프링 XML로<br>
 <code class="language-java highlighter-rouge" style="color: #9E880D;">@Configuration</code> 클래스들을 합치는 것에 대해선<br>
 아래의 섹션에서 다룬다.<br>

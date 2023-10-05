@@ -1,5 +1,5 @@
 ---
-title: 스프링 프레임워크 - 2.1. IoC 컨테이너&#58; 5. 빈 스코프
+title: 스프링 프레임워크 - 5.1. 스프링 웹 MVC&#58; 애너테이션 컨트롤러
 author: wannastudyhardyeah
 date: 2023-10-04 01:20:00 +0800
 categories: [Spring-Doc]
@@ -16,12 +16,32 @@ math: true
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-3-bean-overview">2.1.3. 빈<span style="color: #808080;">Bean</span> 개요</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-4-dependencies">2.1.4. 의존 관계<span style="color: #808080;">Dependencies</span></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-02-1-5-bean-scopes" aria-current="page" class="active">2.1.5. 빈 스코프<span style="color: #808080;">Bean Scopes</span></a><br>
+챕터 5. 웹 서블릿 스택<br>
+&nbsp;&nbsp;5.1. 스프링 웹 MVC<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts/Spring-Chap-05-1-3-annoted-controllers">5.1.3. 애너테이션<span style="color: #808080;">Annotated</span> 컨트롤러</a><br>
 </ol><div class="sc-fIosxK hRRhWV"><div class="sc-gUQvok eBShCz">
 <div class="series-number" align="right">6/6</div>
 </div></div>
 </div>
 <br>
 <hr width="80%">
+
+&nbsp;&nbsp;&nbsp;&nbsp;스프링은 요청 매핑<span style="color: #808080;">request mappings</span>, 요청 입력, 예외 처리 또는 기타 등등에서 사용되는 <code class="language-java highlighter-rouge" style="color: #9E880D;">@Controller</code>와 <code class="language-java highlighter-rouge" style="color: #9E880D;">@RestController</code> 컴포넌트같은 애너테이션 기반의 프로그래밍 모델을 제공한다.<br> 애너테이션 컨트롤러는 유동성 있는 메서드 특징이 있고, 기반 클래스를 확장하거나 특정 인터페이스를 구현할 필요가 없다. 다음 예제는 애너테이션으로 정의된 컨트롤러를 보여주는 코드이다.<br>
+
+```java
+@Controller
+public class HelloController {
+
+    @GetMapping("/hello")
+    public String handle(Model model) {
+        model.addAttribute("message", "Hello World!");
+        return "index";
+    }
+}
+```
+
+위 예제에서, 해당 메서드는 ``Model``형을 입력받았고, 뷰<span style="color: #808080;">view</span> 이름으로 ``String``(문자열)형을 반환한다. 이외에도 이번 챕터에서 다른 더 많은 옵션들을 설명할 것이다.<br>
+
 <h3 id="dependencies-h3"> 1.5. 빈 스코프<span style="color: #808080;">Dependencies</span></h3>
 
 &nbsp;&nbsp;&nbsp;&nbsp;빈을 정의한다는 것은, 바로 그 정의에 있는 클래스의 실제 인스턴스에 대한 레시피를 만드는 것이다. 빈 정의를 레시피에 빗댄 표현은 중요한데, 이는 곧 클래스와 함께 단일 레시피로부터 수많은 객체 인스턴스들을 생성할 수 있다는 뜻이기 때문이다.<br>
