@@ -25,7 +25,7 @@ math: true
 </div>
 <br>
 <hr width="80%">
-<h3 id="dependencies-h3"> 1.5. 빈 스코프<span style="color: #808080;">Dependencies</span></h3>
+<h3 id="dependencies-h3"> 1.5. 빈 스코프</h3>
 
 &nbsp;&nbsp;&nbsp;&nbsp;빈을 정의한다는 것은, 바로 그 정의에 있는 클래스의 실제 인스턴스에 대한 레시피를 만드는 것이다. 빈 정의를 레시피에 빗댄 표현은 중요한데, 이는 곧 클래스와 함께 단일 레시피로부터 수많은 객체 인스턴스들을 생성할 수 있다는 뜻이기 때문이다.<br>
 

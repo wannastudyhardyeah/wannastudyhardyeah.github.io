@@ -13,8 +13,10 @@ math: true
 <li><a href="/posts/Searching-for-Annotation-AliasFor-in-Java/">Java의 Annotation 알아보기 - &#64;AliasFor</a></li>
 <li><a href="/posts/Searching-for-Annotation-Component-in-Java/" aria-current="page" class="active">Java의 Annotation 알아보기 - &#64;Component</a></li>
 <li><a href="/posts/Searching-for-Annotation-Configuration-in-Java/">Java의 Annotation 알아보기 - &#64;Configuration</a></li>
+<li><a href="/posts/Searching-for-Annotation-Indexed-in-Java/">Java의 Annotation 알아보기 - &#64;Indexed</a></li>
+<li><a href="/posts/Searching-for-Annotation-Target-in-Java/">Java의 Annotation 알아보기 - &#64;Target</a></li>
 </ol><div class="sc-fIosxK hRRhWV"><div class="sc-gUQvok eBShCz">
-<div class="series-number" align="right">3/4</div>
+<div class="series-number" align="right">3/6</div>
 </div></div>
 </div>
 

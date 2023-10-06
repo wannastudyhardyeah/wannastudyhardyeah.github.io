@@ -9,12 +9,14 @@ math: true
 ---
 <div class="toc-multiple-posts">
 <h2>스프링 애너테이션<span style="color: #808080;">Annotation</span> 시리즈</h2>
-<ol class="sc-fmciRz gyCSrP"><li><a href="/posts/Searching-for-Annotation-in-Java/">Java의 Annotation 알아보기</a></li>
+<ol class="sc-fmciRz gyCSrP"><li><a href="/posts/Searching-for-Annotation-in-Java/">Java의 Annotation 알아보기 - 애너테이션</a></li>
 <li><a href="/posts/Searching-for-Annotation-AliasFor-in-Java/" aria-current="page" class="active">Java의 Annotation 알아보기 - &#64;AliasFor</a></li>
 <li><a href="/posts/Searching-for-Annotation-Component-in-Java/">Java의 Annotation 알아보기 - &#64;Component</a></li>
 <li><a href="/posts/Searching-for-Annotation-Configuration-in-Java/">Java의 Annotation 알아보기 - &#64;Configuration</a></li>
+<li><a href="/posts/Searching-for-Annotation-Indexed-in-Java/">Java의 Annotation 알아보기 - &#64;Indexed</a></li>
+<li><a href="/posts/Searching-for-Annotation-Target-in-Java/">Java의 Annotation 알아보기 - &#64;Target</a></li>
 </ol><div class="sc-fIosxK hRRhWV"><div class="sc-gUQvok eBShCz">
-<div class="series-number" align="right">2/4</div>
+<div class="series-number" align="right">2/6</div>
 </div></div>
 </div>
 <br>
